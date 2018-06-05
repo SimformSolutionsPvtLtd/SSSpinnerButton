@@ -98,9 +98,9 @@ open class SSSpinnerButton: UIButton {
     }()
     
     /// Sets the colors for the gradient backgorund
-    public var gradientColors: [CGColor]? {
+    public var gradientColors: [UIColor]? {
         willSet {
-            gradientLayer.colors = newValue
+            gradientLayer.colors = newValue?.map({$0.cgColor})
         }
     }
     
