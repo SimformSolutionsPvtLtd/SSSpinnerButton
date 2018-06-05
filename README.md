@@ -1,5 +1,8 @@
 # SSspinnerButton
+
+
 SSSpinnerButton is an elegant button with a diffrent spinner animations.
+
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
@@ -19,37 +22,46 @@ SSSpinnerButton is an elegant button with a diffrent spinner animations.
 
 # Installation
  **CocoaPods**
+ 
 - You can use CocoaPods to install SSSpinnerButton by adding it to your Podfile:
 
-        use_frameworks!
-        pod 'SSSpinnerButton', :git => 'https://github.com/simformsolutions/SSSpinnerButton'
+       use_frameworks!
+       pod 'SSSpinnerButton'
 
 -  
-        import UIKit
-        import SSSpinnerButton
+       import UIKit
+       import SSSpinnerButton
 
 **Manually**
 -   Download and drop **SSSpinnerButton** folder in your project.
 -   Congratulations!
 
 # Usage example
+
 -   In the storyboard add a UIButton and change its class to SSSpinnerButton
-    ### StartAnimation
+-   ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true)
+   
+    **StartAnimation**
 
         button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complate: nil)
    
-    ### StopAnimation
+    
+    **StopAnimation**
       
         button.stopAnimate(complate: {
         })
         
-#   [Documents](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SSSpinnerButtons/docs/index.html)
 
 
 #  Contribute
 -   We would love you for the contribution to SSspinnerButton, check the LICENSE file for more info.
-#   Meta
+ 
+#  Meta
 -    Distributed under the MIT license. See LICENSE for more information.
+
+
+# Inspired 
+-   Spinner animations inspired from [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
 
     
 [swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
