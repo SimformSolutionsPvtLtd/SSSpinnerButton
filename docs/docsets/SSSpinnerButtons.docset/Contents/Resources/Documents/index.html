@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SSSpinnerButtons  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SSSpinnerButtons  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SSSpinnerButtons Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SSSpinnerButtons Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SSSpinnerButtons  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SSBallRotateChase.html">SSBallRotateChase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSBallSpinFadeLoader.html">SSBallSpinFadeLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSCircleStrokeSpin.html">SSCircleStrokeSpin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSLineSpinFadeLoader.html">SSLineSpinFadeLoader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSSpinnerBallClipRotate.html">SSSpinnerBallClipRotate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSSpinnerButton.html">SSSpinnerButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:@M@SSSpinnerButtons@objc(cs)SpinnerLayers">SpinnerLayers</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/SpinnerShape.html">SpinnerShape</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SpinnerType.html">SpinnerType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/CAGradientLayer.html">CAGradientLayer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/SSSpinnerAnimationDelegate.html">SSSpinnerAnimationDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='ssspinnerbutton' class='heading'>SSspinnerButton</h1>
+
+<p>SSSpinnerButton is an elegant button with a diffrent spinner animations.
+<a href="https://swift.org/"><img src="https://img.shields.io/badge/swift-4.0-orange.svg" alt="Swift Version"></a>
+<a href="https://travis-ci.org/dbader/node-datadog-metrics"><img src="https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="http://cocoapods.org/pods/LFAlertController"><img src="https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat" alt="Platform"></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a></p>
+
+<p><img src="https://github.com/simformsolutions/SSSpinnerButton/blob/master/SSSpinnerButton.gif?raw=true" alt="Alt text"></p>
+<h1 id='features' class='heading'>Features!</h1>
+
+<ul>
+<li>Rounded button when spinner active</li>
+<li>Various spinner animations</li>
+<li>CocoaPods</li>
+</ul>
+<h1 id='requirements' class='heading'>Requirements</h1>
+
+<ul>
+<li>iOS 10.0+</li>
+<li>Xcode 9+</li>
+</ul>
+<h1 id='installation' class='heading'>Installation</h1>
+
+<p><strong>CocoaPods</strong></p>
+
+<ul>
+<li><p>You can use CocoaPods to install SSSpinnerButton by adding it to your Podfile:</p>
+<pre class="highlight plaintext"><code>use_frameworks!
+pod 'SSSpinnerButton', :git =&gt; 'https://github.com/simformsolutions/SSSpinnerButton'
+</code></pre></li>
+<li><pre class="highlight plaintext"><code>  import UIKit
+  import SSSpinnerButton
+</code></pre></li>
+</ul>
+
+<p><strong>Manually</strong></p>
+
+<ul>
+<li>Download and drop <strong>SSSpinnerButton</strong> in your project.</li>
+<li>Congratulations!</li>
+</ul>
+<h1 id='usage-example' class='heading'>Usage example</h1>
+
+<ul>
+<li>In the storyboard add a UIButton and change its class to SSSpinnerButton
+### StartAnimation
+    button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complate: nil)
+### StopAnimation
+    button.stopAnimate(complate: {
+    })
+#   <a href="https://github.com/simformsolutions/SSSpinnerButton/blob/master/SSSpinnerButtons/docs/index.html">Documents</a></li>
+</ul>
+<h1 id='contribute' class='heading'>Contribute</h1>
+
+<ul>
+<li>We would love you for the contribution to SSspinnerButton, check the LICENSE file for more info.
+#   Meta</li>
+<li>Distributed under the MIT license. See LICENSE for more information.</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 MIT. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

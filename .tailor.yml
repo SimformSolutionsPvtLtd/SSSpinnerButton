@@ -1,0 +1,66 @@
+# Name the file as below - will be hidden by nature
+# .tailor.yml
+# Rules reference - https://github.com/sleekbyte/tailor/wiki/Rules#constant-naming
+
+
+# // tailor:off
+# swift code - multiline
+# // tailor:on
+
+# single line // tailor:disable
+
+
+include:
+    - SSSpinnerButton      			# Inspect all Swift files under "Spinner/"
+
+exclude:
+
+only:
+# class, enum, struct, and protocol names should follow UpperCamelCase naming convention : several words are joined together, and the first letter of every word is capitalized
+    - upper-camel-case
+ # method, var, and enum value names should follow lowerCamelCase naming convention: first letter of the entire word is lowercase, but subsequent first letters are uppercase.
+    - lower-camel-case
+# Global constants should follow either UpperCamelCase or lowerCamelCase naming conventions. Local constants should follow lowerCamelCase naming conventions.
+    - constant-naming
+# Prefer a single space before and after '->'.
+    - arrow-whitespace
+# There should be no whitespace immediately before/after an opening chevron < and before the closing chevron >.
+    - angle-bracket-whitespace
+# There should be no whitespace preceding the colon, exactly one whitespace after the colon for: var, class, struct, protocol, extension, func, and tuple declarations, dict literals and types & case statements
+    - colon-whitespace
+# Prefer no spaces before and exactly one space after a comma (',') in the following structures: Identifier Lists, Switch Case Item Lists, Parameter Lists, Enum Case Lists, Array Literal Items
+    - comma-whitespace
+# Prefer single space around operator in operator declarations.
+    - operator-whitespace
+# Swift source files should terminate with exactly 1 \n character, not 0 nor more than 1.
+    - terminating-newline
+# There should be no whitespace immediately before/after an opening parenthesis ( and before the closing parenthesis ).
+# NOT SUPPORTED    - parentheses-whitespace
+# Flag whitespace after the last non-whitespace character on each line until the newline.
+   # - trailing-whitespace
+# Prefer at least one whitespace character after a comment opening symbol (//, ///, /*, or /**) and at least one whitespace character before a comment closing symbol (*/).
+    - comment-whitespace
+# Every function and method declaration should have one blank line before and after itself. An exception to this rule are functions that are declared at the start of a file (only need one blank line after their declaration) or at the end of a file (only need one blank line before their declaration).
+    - function-whitespace
+# Enforce a line limit on the lengths of class bodies.
+# NOT SUPPORTED    - max-class-length 1000
+# Enforce a line limit on the lengths of closure bodies.
+# NOT SUPPORTED    - max-closure-length 100
+# Enforce a line limit on the lengths of function bodies.
+# NOT SUPPORTED    - max-function-length 100
+# Enforce a character limit on the length of each line.
+# NOT SUPPORTED    - max-line-length 1000
+# Enforce a character limit on the maximum length of each construct name for classes, enums, enumcases, structs, protocols, elements, functions, labels, setters, typealiases, types, variables, and constants.
+# NOT SUPPORTED    - max-name-length 100
+# Enforce a character limit on the minimum length of each construct name for classes, enums, enumcases, structs, protocols, elements, functions, labels, setters, typealiases, types, variables, and constants.
+# NOT SUPPORTED    - min-name-length 5
+# should follow the One True Brace Style (1TBS)
+    - brace-style
+# NEVER DISABLE - void using the forced form of the type cast operator (as!) because Swift is not able to determine at compile time if the type conversion will succeed.
+    - forced-type-cast
+# Multiple import statements should not be defined on a single line.
+    - multiple-imports
+# NEVER DISABLE - TODO comments should be defined separately using non-nested single line comments. They should adhere to the <TODO: description> or <TODO(developer-name): description> syntax. 
+    - todo-syntax
+# Optional binding lists should not have consecutive var/let bindings. All constants must be preceded by at most one let binding. All variables must be preceded by only one var binding.
+# NOT SUPPORTED    - redundant-optional-binding

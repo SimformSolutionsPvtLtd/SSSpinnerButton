@@ -1,0 +1,33 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/bhargav.bajani/Documents/Data/Demo/SpinnerButtonPod/SSSpinnerButtons/SSSpinnerButtons/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": null,
+      "symbol": "SSSpinnerButton",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bhargav.bajani/Documents/Data/Demo/SpinnerButtonPod/SSSpinnerButtons/SSSpinnerButtons/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 19,
+      "symbol": "SSSpinnerButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bhargav.bajani/Documents/Data/Demo/SpinnerButtonPod/SSSpinnerButtons/SSSpinnerButtons/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 68,
+      "symbol": "SSSpinnerButton.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bhargav.bajani/Documents/Data/Demo/SpinnerButtonPod/SSSpinnerButtons/SSSpinnerButtons/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 82,
+      "symbol": "SSSpinnerButton.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/bhargav.bajani/Documents/Data/Demo/SpinnerButtonPod/SSSpinnerButtons"
+}

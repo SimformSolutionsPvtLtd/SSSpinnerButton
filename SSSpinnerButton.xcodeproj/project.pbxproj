@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		519A451220C6A0FD00BD9352 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5E420C64ED3000F4BCD /* Info.plist */; };
+		519A451320C6A15D00BD9352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DC20C64ED3000F4BCD /* Main.storyboard */; };
+		51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */; };
+		51AAA5DB20C64ED3000F4BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5DA20C64ED3000F4BCD /* ViewController.swift */; };
+		51AAA5E020C64ED3000F4BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DF20C64ED3000F4BCD /* Assets.xcassets */; };
+		51AAA5E320C64ED3000F4BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5E120C64ED3000F4BCD /* LaunchScreen.storyboard */; };
+		51AAA5F920C64EF0000F4BCD /* SpinnerAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */; };
+		51AAA5FA20C64EF0000F4BCD /* spinnerLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */; };
+		51AAA5FB20C64EF0000F4BCD /* spinnerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */; };
+		51AAA5FC20C64EF0000F4BCD /* SSBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */; };
+		51AAA5FD20C64EF0000F4BCD /* SSBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */; };
+		51AAA5FE20C64EF0000F4BCD /* SSCircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */; };
+		51AAA5FF20C64EF0000F4BCD /* SSLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */; };
+		51AAA60020C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */; };
+		51AAA60120C64EF0000F4BCD /* SpinnerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */; };
+		51AAA60220C64EF0000F4BCD /* SSSpinnerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */; };
+		51AAA60420C65EA5000F4BCD /* .tailor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA60320C65EA5000F4BCD /* .tailor.yml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51AAA5D520C64ED3000F4BCD /* SSSpinnerButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSSpinnerButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		51AAA5DA20C64ED3000F4BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51AAA5DD20C64ED3000F4BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51AAA5DF20C64ED3000F4BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51AAA5E220C64ED3000F4BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51AAA5E420C64ED3000F4BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerAnimationDelegate.swift; sourceTree = "<group>"; };
+		51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spinnerLayers.swift; sourceTree = "<group>"; };
+		51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spinnerShape.swift; sourceTree = "<group>"; };
+		51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBallRotateChase.swift; sourceTree = "<group>"; };
+		51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCircleStrokeSpin.swift; sourceTree = "<group>"; };
+		51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLineSpinFadeLoader.swift; sourceTree = "<group>"; };
+		51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSSpinnerBallClipRotate.swift; sourceTree = "<group>"; };
+		51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerTypes.swift; sourceTree = "<group>"; };
+		51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSSpinnerButton.swift; sourceTree = "<group>"; };
+		51AAA60320C65EA5000F4BCD /* .tailor.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .tailor.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51AAA5D220C64ED3000F4BCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51AAA5CC20C64ED3000F4BCD = {
+			isa = PBXGroup;
+			children = (
+				51AAA60320C65EA5000F4BCD /* .tailor.yml */,
+				51AAA5D720C64ED3000F4BCD /* SSSpinnerButton */,
+				51AAA5D620C64ED3000F4BCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51AAA5D620C64ED3000F4BCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5D520C64ED3000F4BCD /* SSSpinnerButton.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51AAA5D720C64ED3000F4BCD /* SSSpinnerButton */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5EA20C64EF0000F4BCD /* SSSpinnerButton */,
+				51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */,
+				51AAA5DA20C64ED3000F4BCD /* ViewController.swift */,
+				51AAA5DC20C64ED3000F4BCD /* Main.storyboard */,
+				51AAA5DF20C64ED3000F4BCD /* Assets.xcassets */,
+				51AAA5E120C64ED3000F4BCD /* LaunchScreen.storyboard */,
+				51AAA5E420C64ED3000F4BCD /* Info.plist */,
+			);
+			path = SSSpinnerButton;
+			sourceTree = "<group>";
+		};
+		51AAA5EA20C64EF0000F4BCD /* SSSpinnerButton */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5EB20C64EF0000F4BCD /* SpinerShapes */,
+				51AAA5F720C64EF0000F4BCD /* SpinnerButton */,
+			);
+			path = SSSpinnerButton;
+			sourceTree = "<group>";
+		};
+		51AAA5EB20C64EF0000F4BCD /* SpinerShapes */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5EC20C64EF0000F4BCD /* SpinnerAnimationDelegate */,
+				51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */,
+				51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */,
+				51AAA5F020C64EF0000F4BCD /* SpinnerShapeWithAnimation */,
+				51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */,
+			);
+			path = SpinerShapes;
+			sourceTree = "<group>";
+		};
+		51AAA5EC20C64EF0000F4BCD /* SpinnerAnimationDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */,
+			);
+			path = SpinnerAnimationDelegate;
+			sourceTree = "<group>";
+		};
+		51AAA5F020C64EF0000F4BCD /* SpinnerShapeWithAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */,
+				51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */,
+				51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */,
+				51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */,
+				51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */,
+			);
+			path = SpinnerShapeWithAnimation;
+			sourceTree = "<group>";
+		};
+		51AAA5F720C64EF0000F4BCD /* SpinnerButton */ = {
+			isa = PBXGroup;
+			children = (
+				51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */,
+			);
+			path = SpinnerButton;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51AAA5D420C64ED3000F4BCD /* SSSpinnerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51AAA5E720C64ED3000F4BCD /* Build configuration list for PBXNativeTarget "SSSpinnerButton" */;
+			buildPhases = (
+				51AAA5D120C64ED3000F4BCD /* Sources */,
+				51AAA5D220C64ED3000F4BCD /* Frameworks */,
+				51AAA5D320C64ED3000F4BCD /* Resources */,
+				32767E0927DB9900B6D99663 /* Tailor */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SSSpinnerButton;
+			productName = SSSpinnerButtons;
+			productReference = 51AAA5D520C64ED3000F4BCD /* SSSpinnerButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51AAA5CD20C64ED3000F4BCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Simform Solutions";
+				TargetAttributes = {
+					51AAA5D420C64ED3000F4BCD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 51AAA5D020C64ED3000F4BCD /* Build configuration list for PBXProject "SSSpinnerButton" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51AAA5CC20C64ED3000F4BCD;
+			productRefGroup = 51AAA5D620C64ED3000F4BCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51AAA5D420C64ED3000F4BCD /* SSSpinnerButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51AAA5D320C64ED3000F4BCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51AAA60420C65EA5000F4BCD /* .tailor.yml in Resources */,
+				519A451320C6A15D00BD9352 /* Main.storyboard in Resources */,
+				51AAA5E320C64ED3000F4BCD /* LaunchScreen.storyboard in Resources */,
+				51AAA5E020C64ED3000F4BCD /* Assets.xcassets in Resources */,
+				519A451220C6A0FD00BD9352 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32767E0927DB9900B6D99663 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\ntailor\nelse\necho \"warning: Please install Tailor from https://tailor.sh\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51AAA5D120C64ED3000F4BCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51AAA5DB20C64ED3000F4BCD /* ViewController.swift in Sources */,
+				51AAA5FA20C64EF0000F4BCD /* spinnerLayers.swift in Sources */,
+				51AAA5FC20C64EF0000F4BCD /* SSBallRotateChase.swift in Sources */,
+				51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */,
+				51AAA5FB20C64EF0000F4BCD /* spinnerShape.swift in Sources */,
+				51AAA60220C64EF0000F4BCD /* SSSpinnerButton.swift in Sources */,
+				51AAA5FE20C64EF0000F4BCD /* SSCircleStrokeSpin.swift in Sources */,
+				51AAA5FD20C64EF0000F4BCD /* SSBallSpinFadeLoader.swift in Sources */,
+				51AAA60120C64EF0000F4BCD /* SpinnerTypes.swift in Sources */,
+				51AAA5FF20C64EF0000F4BCD /* SSLineSpinFadeLoader.swift in Sources */,
+				51AAA5F920C64EF0000F4BCD /* SpinnerAnimationDelegate.swift in Sources */,
+				51AAA60020C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		51AAA5DC20C64ED3000F4BCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51AAA5DD20C64ED3000F4BCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		51AAA5E120C64ED3000F4BCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51AAA5E220C64ED3000F4BCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51AAA5E520C64ED3000F4BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		51AAA5E620C64ED3000F4BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51AAA5E820C64ED3000F4BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y98X8JAPH6;
+				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		51AAA5E920C64ED3000F4BCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y98X8JAPH6;
+				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		51AAA60520C6600C000F4BCD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Analyze;
+		};
+		51AAA60620C6600C000F4BCD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y98X8JAPH6;
+				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Analyze;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51AAA5D020C64ED3000F4BCD /* Build configuration list for PBXProject "SSSpinnerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51AAA5E520C64ED3000F4BCD /* Debug */,
+				51AAA60520C6600C000F4BCD /* Analyze */,
+				51AAA5E620C64ED3000F4BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51AAA5E720C64ED3000F4BCD /* Build configuration list for PBXNativeTarget "SSSpinnerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51AAA5E820C64ED3000F4BCD /* Debug */,
+				51AAA60620C6600C000F4BCD /* Analyze */,
+				51AAA5E920C64ED3000F4BCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51AAA5CD20C64ED3000F4BCD /* Project object */;
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SSSpinnerButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-dE-3h7">
+                                <rect key="frame" x="30" y="80" width="260" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.97647058823529409" green="0.58039215686274503" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wGP-Vh-Znc"/>
+                                        </constraints>
+                                        <state key="normal" title="BallClipRotate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSs-Ty-TWf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-V5-Ctm" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.37647058823529411" green="0.90196078431372551" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="BallSpinFade">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOB-Yz-e4A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-0X-zpK" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.62352941176470589" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="LineSpinFade">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Gm-NO-Xxj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="210" width="260" height="40"/>
+                                        <color key="backgroundColor" red="0.84313725490196079" green="0.61176470588235299" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="BallRotateChase">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsZ-lv-Kv3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="280" width="260" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="CircleStrokeSpin">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WST-Jx-MNj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="Dph-fz-1pX"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.93333333330000001" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L6t-dE-3h7" secondAttribute="trailing" constant="30" id="6oS-uB-lvh"/>
+                            <constraint firstItem="L6t-dE-3h7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="RVe-NY-OAS"/>
+                            <constraint firstItem="L6t-dE-3h7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="Zz5-b1-g0u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBallRotateChase" destination="znd-UY-1Sd" id="Wps-kr-zWO"/>
+                        <outlet property="btnCircleStrokeSpin" destination="Cbe-cO-clF" id="vjh-lV-SHF"/>
+                        <outlet property="btnClipRotate" destination="UW4-Lx-QHw" id="Azq-tL-y3J"/>
+                        <outlet property="btnLineSpinFade" destination="1bF-0X-zpK" id="FuU-oA-7We"/>
+                        <outlet property="btnSpinFade" destination="oEx-V5-Ctm" id="7Ij-GT-WpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
