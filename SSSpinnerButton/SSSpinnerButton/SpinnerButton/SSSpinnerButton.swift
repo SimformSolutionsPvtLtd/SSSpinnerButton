@@ -135,8 +135,8 @@ public extension SSSpinnerButton {
     /// - Parameters:
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
-    ///   - complate: complation block (call after animation start)
-    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complate: (() -> Void)?) {
+    ///   - complete: complation block (call after animation start)
+    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -147,17 +147,17 @@ public extension SSSpinnerButton {
         self.spinnerType = spinnerType
         
         self.layer.cornerRadius = self.frame.height / 2
-        self.collapseAnimation(complate: complate)
+        self.collapseAnimation(complete: complete)
         
     }
     
     /// stop Animation and set button in actual state
     ///
-    /// - Parameter complate: complation block (call after animation Stop)
-    public func stopAnimate(complate: (() -> Void)?) {
+    /// - Parameter complete: complation block (call after animation Stop)
+    public func stopAnimate(complete: (() -> Void)?) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.backToDefaults(complate: complate)
+            self.backToDefaults(complete: complete)
         })
         
     }
@@ -175,7 +175,7 @@ private extension SSSpinnerButton {
     }
     
     /// collapse animation
-    func collapseAnimation(complate: (() -> Void)?) {
+    func collapseAnimation(complete: (() -> Void)?) {
         
         storedTitle = title
         title = ""
@@ -203,15 +203,15 @@ private extension SSSpinnerButton {
         self.perform(#selector(startSpinner), with: nil, afterDelay: animationDuration)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration, execute: {
-            if complate != nil {
-                complate!()
+            if complete != nil {
+                complete!()
             }
         })
         
     }
     
     /// set back to default state of button
-    func backToDefaults(complate: (() -> Void)?) {
+    func backToDefaults(complete: (() -> Void)?) {
         if !isAnimating {
             return
         }
@@ -238,8 +238,8 @@ private extension SSSpinnerButton {
         layer.add(animaton, forKey: animaton.keyPath)
         isAnimating = false
         self.layer.cornerRadius = self.cornrRadius
-        if complate != nil {
-            complate!()
+        if complete != nil {
+            complete!()
         }
         
     }

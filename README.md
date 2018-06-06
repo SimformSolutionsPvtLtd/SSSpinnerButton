@@ -43,12 +43,12 @@ SSSpinnerButton is an elegant button with a diffrent spinner animations.
    
     **StartAnimation**
 
-        button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complate: nil)
+        button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complete: nil)
    
     
     **StopAnimation**
       
-        button.stopAnimate(complate: {
+        button.stopAnimate(complete: {
         })
         
 
