@@ -18,7 +18,7 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, completion: (() -> Void)?) {
         
         let sizeValue = min(frame.width, frame.height)
         let center = CGPoint(x: (sizeValue/2.25), y: (sizeValue/2.25))

@@ -18,7 +18,7 @@ class SSCircleStrokeSpin: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, completion: (() -> Void)?) {
         
         let defaultPadding: CGFloat = 10.0
         let sizeValue = max(min(frame.width, frame.height) - defaultPadding, 1.0)

@@ -17,6 +17,12 @@ extension CAGradientLayer {
     }
 }
 
+public enum CompletionType {
+    case none
+    case success
+    case fail
+    case error
+}
 ///
 open class SSSpinnerButton: UIButton {
     // MARK: - Properties
@@ -84,7 +90,7 @@ open class SSSpinnerButton: UIButton {
     open override func layoutSubviews() {
         super.layoutSubviews()
         clipsToBounds = true
-         gradientLayer.frame = self.bounds
+        gradientLayer.frame = self.bounds
     }
     
     
@@ -97,7 +103,7 @@ open class SSSpinnerButton: UIButton {
         return gradient
     }()
     
-    /// Sets the colors for the gradient backgorund
+    /// Sets the colors for the gradient background
     public var gradientColors: [UIColor]? {
         willSet {
             gradientLayer.colors = newValue?.map({$0.cgColor})
@@ -111,6 +117,7 @@ private extension SSSpinnerButton {
     /// Default setup of Button UI and Lable
     func setUp() {
         
+        self.removeAnimationLayer()
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -141,7 +148,7 @@ public extension SSSpinnerButton {
             self.cornrRadius = self.layer.cornerRadius
         }
         
-        self.stopAnimation()
+        self.removeAnimationLayer()
         isAnimating = true
         self.spinnerColor = spinnercolor
         self.spinnerType = spinnerType
@@ -157,7 +164,18 @@ public extension SSSpinnerButton {
     public func stopAnimate(complete: (() -> Void)?) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.backToDefaults(complete: complete)
+            self.backToDefaults(completionType: .none, complete: complete)
+        })
+        
+    }
+    
+//    public func <#name#>(<#parameters#>) -> <#return type#> {
+//        <#function body#>
+//    }
+    
+    public func stopAnimateWithCompletionType(completionType: CompletionType, complete: (() -> Void)?) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.backToDefaults(completionType: completionType, complete: complete)
         })
         
     }
@@ -166,13 +184,16 @@ public extension SSSpinnerButton {
 
 private extension SSSpinnerButton {
     
-    /// stop animation of specific spinner
-    func stopAnimation() {
-        for item in layer.sublayers! where item is SpinnerLayers {
-            item.removeAllAnimations()
-            item.removeFromSuperlayer()
+    /// remove animation layer of specific spinner
+    func removeAnimationLayer() {
+        if layer.sublayers != nil {
+            for item in layer.sublayers! where item is SpinnerLayers {
+                item.removeAllAnimations()
+                item.removeFromSuperlayer()
+            }
         }
     }
+    
     
     /// collapse animation
     func collapseAnimation(complete: (() -> Void)?) {
@@ -211,11 +232,32 @@ private extension SSSpinnerButton {
     }
     
     /// set back to default state of button
-    func backToDefaults(complete: (() -> Void)?) {
+    func backToDefaults(completionType: CompletionType, complete: (() -> Void)?) {
         if !isAnimating {
             return
         }
-        self.stopAnimation()
+        self.removeAnimationLayer()
+        switch completionType {
+        case .none:
+            self.setDefaultDataToButton(complete: complete)
+            break
+        case .success, .fail, .error:
+            let animation: SSSpinnerAnimationDelegate = SpinnerType.checkMark.animation()
+            animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, completion: {
+                if complete != nil {
+                    complete!()
+                }
+                self.isUserInteractionEnabled = true
+                //                self.setDefaultDataToButton(complete: complete)
+            })
+            
+        }
+        
+        
+    }
+    
+    func setDefaultDataToButton(complete: (() -> Void)?) {
+        self.removeAnimationLayer()
         setTitle(storedTitle, for: .normal)
         self.setBackgroundImage(self.storedBackgroundNormalImage, for: .normal)
         self.setBackgroundImage(self.storedBackgroundDisabledImage, for: .disabled)
@@ -241,14 +283,14 @@ private extension SSSpinnerButton {
         if complete != nil {
             complete!()
         }
-        
     }
     
     /// start spinner
     @objc func startSpinner() {
         
         let animation: SSSpinnerAnimationDelegate = self.spinnerType.animation()
-        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor)
+        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor, completion: nil)
+        
     }
     
 }

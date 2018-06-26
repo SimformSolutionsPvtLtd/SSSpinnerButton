@@ -48,6 +48,8 @@ public enum SpinnerType: Int {
      */
     case circleStrokeSpin
     
+    case checkMark
+    
     /// Animation of spinner
     ///
     /// - Returns: 
@@ -63,6 +65,8 @@ public enum SpinnerType: Int {
             return SSBallRotateChase()
         case .circleStrokeSpin:
             return SSCircleStrokeSpin()
+        case .checkMark:
+            return SSCheckMark()
         }
     }
     

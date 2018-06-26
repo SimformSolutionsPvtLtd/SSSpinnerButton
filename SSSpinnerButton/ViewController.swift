@@ -29,12 +29,19 @@ class ViewController: UIViewController {
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
        
+        
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
+        
         
         sender.startAnimate(spinnerType: arr[sender.tag], spinnercolor: .white, complete: nil)
         
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (_) in
+            if  sender.tag == 4 {
+                sender.stopAnimateWithCompletionType(completionType: .success, complete: nil)
+             return
+            }
             sender.stopAnimate(complete: {
+                
             })
             
         }

@@ -1,7 +1,7 @@
 # SSspinnerButton
 
 
-SSSpinnerButton is an elegant button with a diffrent spinner animations.
+SSSpinnerButton is an elegant button with a different spinner animations.
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]

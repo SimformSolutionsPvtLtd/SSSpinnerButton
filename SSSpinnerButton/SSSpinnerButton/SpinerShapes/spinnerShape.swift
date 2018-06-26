@@ -20,6 +20,7 @@ enum SpinnerShape {
     case circle
     case line
     case stroke
+    case rightCheckmark
     
     
     /// Return CALayer of specific shape
@@ -64,7 +65,11 @@ enum SpinnerShape {
                         clockwise: true)
             layer.fillColor = nil
             layer.strokeColor = color.cgColor
-            layer.lineWidth = 3
+          
+            layer.lineWidth = 2
+        case .rightCheckmark:
+            break
+            
         }
         
         layer.backgroundColor = nil

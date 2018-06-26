@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5189267820C96E9F0016E3A0 /* SSCheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189267720C96E9F0016E3A0 /* SSCheckMark.swift */; };
 		519A451220C6A0FD00BD9352 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5E420C64ED3000F4BCD /* Info.plist */; };
 		519A451320C6A15D00BD9352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DC20C64ED3000F4BCD /* Main.storyboard */; };
 		51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5189267720C96E9F0016E3A0 /* SSCheckMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSCheckMark.swift; path = SSSpinnerButton/SSSpinnerButton/SpinerShapes/SSCheckMark.swift; sourceTree = SOURCE_ROOT; };
 		51AAA5D520C64ED3000F4BCD /* SSSpinnerButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSSpinnerButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51AAA5DA20C64ED3000F4BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */,
 				51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */,
 				51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */,
+				5189267720C96E9F0016E3A0 /* SSCheckMark.swift */,
 			);
 			path = SpinnerShapeWithAnimation;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				51AAA5FD20C64EF0000F4BCD /* SSBallSpinFadeLoader.swift in Sources */,
 				51AAA60120C64EF0000F4BCD /* SpinnerTypes.swift in Sources */,
 				51AAA5FF20C64EF0000F4BCD /* SSLineSpinFadeLoader.swift in Sources */,
+				5189267820C96E9F0016E3A0 /* SSCheckMark.swift in Sources */,
 				51AAA5F920C64EF0000F4BCD /* SpinnerAnimationDelegate.swift in Sources */,
 				51AAA60020C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift in Sources */,
 			);
