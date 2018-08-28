@@ -31,7 +31,7 @@ class ViewController: UIViewController {
        
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
         
-        sender.startAnimate(spinnerType: arr[sender.tag], spinnercolor: .white, spinnerSize: 15 , complete: nil)
+        sender.startAnimate(spinnerType: arr[sender.tag], spinnercolor: .white, spinnerSize: 20, complete: nil)
                 Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (_) in
             sender.stopAnimate(complete: {
             })

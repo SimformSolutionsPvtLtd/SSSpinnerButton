@@ -229,15 +229,14 @@ private extension SSSpinnerButton {
         self.setImage(storedHighlightedImage, for: .highlighted)
         isUserInteractionEnabled = true
         
-        let animaton = CABasicAnimation(keyPath: "bounds.size.width")
+        let animation = CABasicAnimation(keyPath: "bounds.size.width")
+        animation.fromValue = frame.height
+        animation.toValue = frame.width
+        animation.duration = animationDuration
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
         
-        animaton.fromValue = frame.height
-        animaton.toValue = frame.width
-        animaton.duration = animationDuration
-        animaton.fillMode = kCAFillModeForwards
-        animaton.isRemovedOnCompletion = false
-        
-        layer.add(animaton, forKey: animaton.keyPath)
+        layer.add(animation, forKey: animation.keyPath)
         isAnimating = false
         self.layer.cornerRadius = self.cornrRadius
         if complete != nil {

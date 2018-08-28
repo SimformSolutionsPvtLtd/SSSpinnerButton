@@ -20,16 +20,13 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
     func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
         var defaultPadding: CGFloat = 10.0
-        
         var sizeofSpinner: CGFloat?
         if spinnerSize != nil {
             defaultPadding = 0.0
             sizeofSpinner =  max(CGFloat(spinnerSize!) - defaultPadding, 1.0)
         }
-        
         var size =  max(min(frame.width, frame.height) - defaultPadding, 1.0)
-       
-        if sizeofSpinner != nil && sizeofSpinner! > (size - 10) {
+        if sizeofSpinner != nil && sizeofSpinner! > (size - defaultPadding) {
             defaultPadding = 10.0
             size =  max(min(frame.width, frame.height) - defaultPadding, 1.0)
             sizeofSpinner = size

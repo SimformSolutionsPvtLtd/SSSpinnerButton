@@ -21,9 +21,11 @@ class SSCircleStrokeSpin: SSSpinnerAnimationDelegate {
     func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
         let defaultPadding: CGFloat = 10.0
+        var center = CGPoint(x: defaultPadding / 2, y: defaultPadding / 2)
         var sizeValue = max(min(frame.width, frame.height) - defaultPadding, 1.0)
-        if spinnerSize != nil {
-            sizeValue =  max(CGFloat(spinnerSize!) - defaultPadding, 1.0)
+        if spinnerSize != nil && CGFloat(spinnerSize!) < sizeValue {
+            sizeValue =  max(CGFloat(spinnerSize!), 1.0)
+            center = CGPoint(x: frame.height / 2 - sizeValue / 2, y: frame.height / 2 - sizeValue / 2)
         }
         let beginTime: Double = 0.5
         let strokeStartDuration: Double = 1.2
@@ -55,8 +57,8 @@ class SSCircleStrokeSpin: SSSpinnerAnimationDelegate {
         
         let circle = SpinnerShape.stroke.layerWith(size: CGSize(width: sizeValue, height: sizeValue), color: color)
         let frame = CGRect(
-            x: defaultPadding / 2,
-            y: defaultPadding / 2,
+            x: center.x,
+            y: center.y,
             width: sizeValue,
             height: sizeValue
         )

@@ -26,7 +26,7 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
         if spinnerSize != nil {
             sizeOfSpinner =   max(min(CGFloat(spinnerSize!), sizeOfSpinner), 1.0)
         }
-        let center = CGPoint(x: (sizeValue/2), y: (sizeValue/2))
+        let center = CGPoint(x: (sizeValue / 2), y: (sizeValue / 2))
         let circleSpacing: CGFloat = 1
         let circleSize =  max((sizeOfSpinner * circleSpacing / 8), 1.0)
         
@@ -82,7 +82,7 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
     ///   - color: spinner color
     /// - Returns: 
     func circleAt(angle: CGFloat, size: CGFloat, origin: CGPoint, containerSize: CGSize, color: UIColor) -> CALayer {
-        let radius = (containerSize.width/2) - (size/2)
+        let radius = (containerSize.width / 2) - (size / 2)
         let circle = SpinnerShape.circle.layerWith(size: CGSize(width: size, height: size), color: color)
         let frame = CGRect(
             x: origin.x + radius * (cos(angle)) - (size / 2),
@@ -91,7 +91,6 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
             height: size)
         
         circle.frame = frame
-        
         
         return circle
     }
