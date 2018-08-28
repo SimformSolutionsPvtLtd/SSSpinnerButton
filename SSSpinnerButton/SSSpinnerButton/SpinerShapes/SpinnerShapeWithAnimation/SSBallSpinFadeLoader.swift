@@ -18,12 +18,17 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
+        let defaultPadding: CGFloat = 10.0
         let sizeValue = min(frame.width, frame.height)
-        let center = CGPoint(x: (sizeValue/2.25), y: (sizeValue/2.25))
+        var sizeOfSpinner = max(sizeValue - (defaultPadding), 1.0)
+        if spinnerSize != nil {
+            sizeOfSpinner =   max(min(CGFloat(spinnerSize!), sizeOfSpinner), 1.0)
+        }
+        let center = CGPoint(x: (sizeValue/2), y: (sizeValue/2))
         let circleSpacing: CGFloat = 1
-        let circleSize = (sizeValue  * circleSpacing) / 8
+        let circleSize =  max((sizeOfSpinner * circleSpacing / 8), 1.0)
         
         let duration: CFTimeInterval = 1
         let beginTime = CACurrentMediaTime()
@@ -56,7 +61,7 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
             let circle = circleAt(angle: CGFloat(Double.pi / 4) * CGFloat(i),
                                   size: circleSize,
                                   origin: center,
-                                  containerSize: CGSize(width: sizeValue, height: sizeValue),
+                                  containerSize: CGSize(width: sizeOfSpinner, height: sizeOfSpinner),
                                   color: color)
             
             animation.beginTime = beginTime + beginTimes[i]
@@ -77,15 +82,16 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
     ///   - color: spinner color
     /// - Returns: 
     func circleAt(angle: CGFloat, size: CGFloat, origin: CGPoint, containerSize: CGSize, color: UIColor) -> CALayer {
-         let radius = (containerSize.width / 2 - size / 2 ) - 4
+        let radius = (containerSize.width/2) - (size/2)
         let circle = SpinnerShape.circle.layerWith(size: CGSize(width: size, height: size), color: color)
         let frame = CGRect(
-            x: origin.x + radius * (cos(angle)),
-            y: origin.y + radius * (sin(angle)),
+            x: origin.x + radius * (cos(angle)) - (size / 2),
+            y: origin.y + radius * (sin(angle)) - (size / 2),
             width: size,
             height: size)
         
         circle.frame = frame
+        
         
         return circle
     }

@@ -12,16 +12,20 @@ import UIKit
 /// 
 class SSSpinnerBallClipRotate: SSSpinnerAnimationDelegate {
     
+    
+    
     ///  setup spinner layer
     ///
     /// - Parameters:
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
        
-        let sizeValue = min(frame.width, frame.height)
-
+        var sizeValue = min(frame.width, frame.height)
+        if spinnerSize != nil {
+            sizeValue =  max(CGFloat(spinnerSize!), 1.0)
+        }
         let ballClip = SpinnerShape.ring.layerWith(size: CGSize(width: sizeValue, height: sizeValue), color: color)
         ballClip.frame = CGRect(x: 0, y: 0, width: sizeValue, height: sizeValue)
         

@@ -17,22 +17,37 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
-        let defaultPadding: CGFloat = 10.0
+        var defaultPadding: CGFloat = 10.0
         
-        let size =  max(min(frame.width, frame.height) - defaultPadding, 1.0)
+        var sizeofSpinner: CGFloat?
+        if spinnerSize != nil {
+            defaultPadding = 0.0
+            sizeofSpinner =  max(CGFloat(spinnerSize!) - defaultPadding, 1.0)
+        }
+        
+        var size =  max(min(frame.width, frame.height) - defaultPadding, 1.0)
+       
+        if sizeofSpinner != nil && sizeofSpinner! > (size - 10) {
+            defaultPadding = 10.0
+            size =  max(min(frame.width, frame.height) - defaultPadding, 1.0)
+            sizeofSpinner = size
+        }
+        
         let center = CGPoint(x: (size/2) + (defaultPadding / 2), y: (size/2) + (defaultPadding / 2))
-        let circleSize = size / 6
+        let circleSize = sizeofSpinner != nil ? max(min(sizeofSpinner!/6, size/6), 1.0) : size / 6
+      
         for i in 0 ..< 5 {
             let factor = Float(i) * 1 / 5
             let circle = SpinnerShape.circle.layerWith(size: CGSize(width: circleSize, height: circleSize), color: color)
-            let animation = rotateAnimation(factor, x: center.x, y: center.y, size: CGSize(width: size - circleSize, height: size - circleSize))
+            let animation = rotateAnimation(factor, x: center.x, y: center.y, size: CGSize(width: (sizeofSpinner != nil ? sizeofSpinner! : size) - circleSize, height: (sizeofSpinner != nil ? sizeofSpinner! : size) - circleSize))
             
             circle.frame = CGRect(x: 0, y: 0, width: circleSize, height: circleSize)
             circle.add(animation, forKey: "animation")
             layer.addSublayer(circle)
         }
+        
     }
     
     

@@ -18,11 +18,14 @@ class SSLineSpinFadeLoader: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor) {
+   func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
         let defaultPadding: CGFloat = 4.0
         
-        let sizeValue = max(min(frame.width, frame.height) - defaultPadding, 1.0)
+        var sizeValue = max(min(frame.width, frame.height) - defaultPadding, 1.0)
+        if spinnerSize != nil {
+            sizeValue =  max(CGFloat(spinnerSize!) - defaultPadding, 1.0)
+        }
         let center = CGPoint(x: (sizeValue/2) + (defaultPadding / 2), y: (sizeValue/2) + (defaultPadding / 2))
         let duration: CFTimeInterval = 1.2
         let beginTime = CACurrentMediaTime()

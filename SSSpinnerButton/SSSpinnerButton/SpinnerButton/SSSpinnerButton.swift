@@ -46,6 +46,7 @@ open class SSSpinnerButton: UIButton {
     /// Sets the spinner color
     public var spinnerColor: UIColor = UIColor.gray
     
+    var spinnerSize: UInt?
     /// Sets the button title for its normal state
     public var title: String? {
         get {
@@ -136,7 +137,7 @@ public extension SSSpinnerButton {
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
     ///   - complete: complation block (call after animation start)
-    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
+    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -145,6 +146,7 @@ public extension SSSpinnerButton {
         isAnimating = true
         self.spinnerColor = spinnercolor
         self.spinnerType = spinnerType
+        self.spinnerSize = spinnerSize
         
         self.layer.cornerRadius = self.frame.height / 2
         self.collapseAnimation(complete: complete)
@@ -248,7 +250,7 @@ private extension SSSpinnerButton {
     @objc func startSpinner() {
         
         let animation: SSSpinnerAnimationDelegate = self.spinnerType.animation()
-        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor)
+        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor, spinnerSize: self.spinnerSize)
     }
     
 }
