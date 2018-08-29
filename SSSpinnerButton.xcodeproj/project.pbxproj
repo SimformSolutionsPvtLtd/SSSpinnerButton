@@ -221,7 +221,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if hash tailor 2>/dev/null; then\ntailor\nelse\necho \"warning: Please install Tailor from https://tailor.sh\"\nfi\n";
+			shellScript = "if hash tailor 2>/dev/null; then\ntailor\nelse\necho \"warning: Please install Tailor from https://tailor.sh\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

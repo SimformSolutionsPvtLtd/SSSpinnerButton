@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-dE-3h7">
-                                <rect key="frame" x="30" y="80" width="260" height="320"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-dE-3h7">
+                                <rect key="frame" x="30" y="80" width="260" height="360"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
@@ -35,8 +35,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-V5-Ctm" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="70" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="70" width="260" height="80"/>
                                         <color key="backgroundColor" red="0.37647058823529411" green="0.90196078431372551" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="oAt-2j-W9M"/>
+                                        </constraints>
                                         <state key="normal" title="BallSpinFade">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -45,8 +48,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-0X-zpK" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="180" width="260" height="40"/>
                                         <color key="backgroundColor" red="0.62352941176470589" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Bff-R0-oeL"/>
+                                        </constraints>
                                         <state key="normal" title="LineSpinFade">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -55,8 +61,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="210" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="250" width="260" height="40"/>
                                         <color key="backgroundColor" red="0.84313725490196079" green="0.61176470588235299" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Efm-If-Dtj"/>
+                                        </constraints>
                                         <state key="normal" title="BallRotateChase">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -65,8 +74,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="280" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="320" width="260" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jDW-j4-0fJ"/>
+                                        </constraints>
                                         <state key="normal" title="CircleStrokeSpin">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
