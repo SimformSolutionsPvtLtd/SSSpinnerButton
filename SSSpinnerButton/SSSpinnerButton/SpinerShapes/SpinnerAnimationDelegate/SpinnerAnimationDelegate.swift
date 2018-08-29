@@ -11,5 +11,5 @@ import UIKit
 
 /// 
 protocol SSSpinnerAnimationDelegate {
-    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, completion: (() -> Void)?)
+    func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?)
 }

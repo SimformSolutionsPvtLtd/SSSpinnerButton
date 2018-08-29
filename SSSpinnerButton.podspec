@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name         = "SSSpinnerButton"
-  s.version      = "1.0.2"
-  s.summary      = "SSSpinnerButton is an elegant button with a diffrent spinner animations."
+  s.version      = "1.0.3"
+  s.summary      = "SSSpinnerButton is an elegant button with a different spinner animations."
 
-  #s.description  = "SSSpinnerButton is an elegant button with a diffrent spinner animations."
+  #s.description  = "SSSpinnerButton is an elegant button with a different spinner animations."
 
   s.homepage     = 'https://github.com/simformsolutions/SSSpinnerButton.git'
   
