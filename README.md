@@ -14,6 +14,7 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 # Features!
   - Rounded button when spinner active
   - Various spinner animations
+  - Dynamic spinner size
   - CocoaPods
 
 # Requirements
@@ -43,12 +44,15 @@ SSSpinnerButton is an elegant button with a different spinner animations.
    
     **StartAnimation**
 
-        button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complete: nil)
+        button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, spinnerSize: 20, complete: {
+            // Your code here
+        })
    
     
     **StopAnimation**
       
         button.stopAnimate(complete: {
+            // Your code here
         })
         
 
