@@ -46,6 +46,7 @@ open class SSSpinnerButton: UIButton {
     /// Sets the spinner color
     public var spinnerColor: UIColor = UIColor.gray
     
+    var spinnerSize: UInt?
     /// Sets the button title for its normal state
     public var title: String? {
         get {
@@ -135,8 +136,9 @@ public extension SSSpinnerButton {
     /// - Parameters:
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
+    ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
-    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
+    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -145,6 +147,7 @@ public extension SSSpinnerButton {
         isAnimating = true
         self.spinnerColor = spinnercolor
         self.spinnerType = spinnerType
+        self.spinnerSize = spinnerSize
         
         self.layer.cornerRadius = self.frame.height / 2
         self.collapseAnimation(complete: complete)
@@ -227,15 +230,14 @@ private extension SSSpinnerButton {
         self.setImage(storedHighlightedImage, for: .highlighted)
         isUserInteractionEnabled = true
         
-        let animaton = CABasicAnimation(keyPath: "bounds.size.width")
+        let animation = CABasicAnimation(keyPath: "bounds.size.width")
+        animation.fromValue = frame.height
+        animation.toValue = frame.width
+        animation.duration = animationDuration
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
         
-        animaton.fromValue = frame.height
-        animaton.toValue = frame.width
-        animaton.duration = animationDuration
-        animaton.fillMode = kCAFillModeForwards
-        animaton.isRemovedOnCompletion = false
-        
-        layer.add(animaton, forKey: animaton.keyPath)
+        layer.add(animation, forKey: animation.keyPath)
         isAnimating = false
         self.layer.cornerRadius = self.cornrRadius
         if complete != nil {
@@ -248,7 +250,7 @@ private extension SSSpinnerButton {
     @objc func startSpinner() {
         
         let animation: SSSpinnerAnimationDelegate = self.spinnerType.animation()
-        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor)
+        animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor, spinnerSize: self.spinnerSize)
     }
     
 }
