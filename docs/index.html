@@ -13,7 +13,7 @@
     <a title="SSSpinnerButton  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">SSSpinnerButton Docs</a> (65% documented)</p>
+        <p><a href="index.html">SSSpinnerButton Docs</a> (64% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -101,6 +101,7 @@
 <ul>
 <li>Rounded button when spinner active</li>
 <li>Various spinner animations</li>
+<li>Dynamic spinner size</li>
 <li>CocoaPods</li>
 </ul>
 <h1 id='requirements' class='heading'>Requirements</h1>
@@ -135,11 +136,14 @@
 <li><p><img src="https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true" alt="Alt text"></p>
 
 <p><strong>StartAnimation</strong></p>
-<pre class="highlight plaintext"><code>button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, complate: nil)
+<pre class="highlight plaintext"><code>button.startAnimate(spinnerType: SpinnerType.ballClipRotate, spinnercolor: UIColor.red, spinnerSize: 20, complete: {
+    // Your code here
+})
 </code></pre>
 
 <p><strong>StopAnimation</strong></p>
-<pre class="highlight plaintext"><code>button.stopAnimate(complate: {
+<pre class="highlight plaintext"><code>button.stopAnimate(complete: {
+    // Your code here
 })
 </code></pre></li>
 </ul>

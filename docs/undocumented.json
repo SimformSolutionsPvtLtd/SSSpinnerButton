@@ -3,13 +3,13 @@
     {
       "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerAnimationDelegate/SpinnerAnimationDelegate.swift",
       "line": 14,
-      "symbol": "SSSpinnerAnimationDelegate.setupSpinnerAnimation(layer:frame:color:)",
+      "symbol": "SSSpinnerAnimationDelegate.setupSpinnerAnimation(layer:frame:color:spinnerSize:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSLineSpinFadeLoader.swift",
-      "line": 62,
+      "line": 67,
       "symbol": "SSLineSpinFadeLoader.lineAt(angle:size:origin:containerSize:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -142,14 +142,21 @@
     },
     {
       "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 70,
+      "line": 49,
+      "symbol": "SSSpinnerButton.spinnerSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 71,
       "symbol": "SSSpinnerButton.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 84,
+      "line": 85,
       "symbol": "SSSpinnerButton.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
