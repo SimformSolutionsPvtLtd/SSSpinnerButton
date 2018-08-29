@@ -17,6 +17,7 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
     ///   - layer: layer Parent layer (Button layer)
     ///   - frame: frame of parant layer
     ///   - color: color of spinner
+    ///   - spinnerSize: size of spinner layer
     func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?) {
         
         var defaultPadding: CGFloat = 10.0
@@ -32,8 +33,8 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
             sizeofSpinner = size
         }
         
-        let center = CGPoint(x: (size/2) + (defaultPadding / 2), y: (size/2) + (defaultPadding / 2))
-        let circleSize = sizeofSpinner != nil ? max(min(sizeofSpinner!/6, size/6), 1.0) : size / 6
+        let center = CGPoint(x: (size/2) + (defaultPadding / 2), y: (size / 2) + (defaultPadding / 2))
+        let circleSize = sizeofSpinner != nil ? max(min(sizeofSpinner! / 6, size / 6), 1.0) : size / 6
       
         for i in 0 ..< 5 {
             let factor = Float(i) * 1 / 5

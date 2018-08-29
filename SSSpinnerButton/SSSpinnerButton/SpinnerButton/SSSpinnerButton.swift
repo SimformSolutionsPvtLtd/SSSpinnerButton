@@ -136,6 +136,7 @@ public extension SSSpinnerButton {
     /// - Parameters:
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
+    ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
     public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
