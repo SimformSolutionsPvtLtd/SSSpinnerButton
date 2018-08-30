@@ -16,6 +16,9 @@ import UIKit
 /// - lineSpinFade:
 /// - ballRotateChase:
 /// - circleStrokeSpin:
+/// - checkMark:
+/// - failMark:
+/// - errorMark:
 public enum SpinnerType: Int {
     /**
      BallClipRotate.
@@ -47,8 +50,24 @@ public enum SpinnerType: Int {
      - returns: Instance of SSCircleStrokeSpin.
      */
     case circleStrokeSpin
-    
+    /**
+     CircleStrokeSpin.
+     
+     - returns: Instance of SSCheckMark.
+     */
     case checkMark
+    /**
+     CircleStrokeSpin.
+     
+     - returns: Instance of SSFailMark.
+     */
+    case failMark
+    /**
+     CircleStrokeSpin.
+     
+     - returns: Instance of SSErrorMark.
+     */
+    case errorMark
     
     /// Animation of spinner
     ///
@@ -66,7 +85,11 @@ public enum SpinnerType: Int {
         case .circleStrokeSpin:
             return SSCircleStrokeSpin()
         case .checkMark:
-            return SSCheckMark()
+            return SSSuccessMark()
+        case .failMark:
+            return SSFailMark()
+        case .errorMark:
+            return SSErrorMark()
         }
     }
     

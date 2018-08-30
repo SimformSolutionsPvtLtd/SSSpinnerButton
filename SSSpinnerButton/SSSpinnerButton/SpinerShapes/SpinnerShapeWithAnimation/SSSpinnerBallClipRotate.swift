@@ -31,11 +31,9 @@ class SSSpinnerBallClipRotate: SSSpinnerAnimationDelegate {
         ballClip.frame = CGRect(x: center.x, y: center.x, width: sizeValue, height: sizeValue)
         ballClip.frame.size.height = sizeValue
         ballClip.frame.size.width = sizeValue
-        
         layer.addSublayer(ballClip)
         
         let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-        
         scaleAnimation.keyTimes = [0, 0.5, 1].map { NSNumber(value: $0) }
         scaleAnimation.values = [0.8, 0.4, 0.8].map { NSNumber(value: $0) }
         

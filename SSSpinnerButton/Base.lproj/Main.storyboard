@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-dE-3h7">
-                                <rect key="frame" x="30" y="80" width="260" height="360"/>
+                                <rect key="frame" x="30" y="80" width="260" height="400"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="40"/>
@@ -61,10 +61,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="250" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="250" width="260" height="80"/>
                                         <color key="backgroundColor" red="0.84313725490196079" green="0.61176470588235299" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Efm-If-Dtj"/>
+                                            <constraint firstAttribute="height" constant="80" id="Efm-If-Dtj"/>
                                         </constraints>
                                         <state key="normal" title="BallRotateChase">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="260" height="40"/>
+                                        <rect key="frame" x="0.0" y="360" width="260" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="jDW-j4-0fJ"/>

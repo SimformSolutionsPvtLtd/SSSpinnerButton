@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var btnClipRotate: SSSpinnerButton!
     @IBOutlet weak var btnSpinFade: SSSpinnerButton!
     @IBOutlet weak var btnLineSpinFade: SSSpinnerButton!
@@ -28,18 +29,35 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
-       
-        
+
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
         
+        // MARK: Start Animating
         sender.startAnimate(spinnerType: arr[sender.tag], spinnercolor: .white, spinnerSize: 20, complete: nil)
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (_) in
-            if  sender.tag == 4 {
-                sender.stopAnimateWithCompletionType(completionType: .success, complete: nil)
+        Timer.scheduledTimer(withTimeInterval: 0, repeats: false) { (_) in
+            if  sender.tag == 1 {
+                // MARK: Stop Animating with completion type and back to default
+                // MARK: completion type is fail
+                sender.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
+                    // Your completion actions
+                })
                 return
             }
+            if sender.tag == 2 {
+                // MARK: Stop animating with completion type
+                // MARK: completion type is success
+                sender.stopAnimatingWithCompletionType(completionType: .success, complete: nil)
+                return
+            }
+            if sender.tag == 3 {
+                // MARK: Stop animating with completion type
+                // MARK: completion type is error
+                sender.stopAnimatingWithCompletionType(completionType: .error, complete: nil)
+                return
+            }
+            // MARK: Stop animating without completion
             sender.stopAnimate(complete: {
-                
+                // Your completion actions
             })
             
         }

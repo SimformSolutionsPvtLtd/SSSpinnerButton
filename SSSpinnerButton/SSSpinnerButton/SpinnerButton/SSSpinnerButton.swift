@@ -20,8 +20,8 @@ extension CAGradientLayer {
 public enum CompletionType {
     case none
     case success
-    case fail
     case error
+    case fail
 }
 ///
 open class SSSpinnerButton: UIButton {
@@ -161,26 +161,36 @@ public extension SSSpinnerButton {
         
     }
     
-    /// stop Animation and set button in actual state
+    /// stop animation and set button in actual state
     ///
     /// - Parameter complete: complation block (call after animation Stop)
     public func stopAnimate(complete: (() -> Void)?) {
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.backToDefaults(completionType: .none, complete: complete)
+            self.backToDefaults(completionType: .none, setToDefaults: false, complete: complete)
         })
-        
     }
     
-//    public func <#name#>(<#parameters#>) -> <#return type#> {
-//        <#function body#>
-//    }
-    
-    public func stopAnimateWithCompletionType(completionType: CompletionType, complete: (() -> Void)?) {
+    /// stop animation and set to default with completion type
+    ///
+    /// - Parameters:
+    ///   - completionType: completion type
+    ///   - backToDefaults: back to default state
+    ///   - complete: complation block (call after animation Stop)
+    public func stopAnimationWithCompletionTypeAndBackToDefaults(completionType: CompletionType, backToDefaults: Bool, complete: (() -> Void)?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.backToDefaults(completionType: completionType, complete: complete)
+            self.backToDefaults(completionType: completionType, setToDefaults: backToDefaults, complete: complete)
         })
-        
+    }
+    
+    /// stop animation with completion type
+    ///
+    /// - Parameters:
+    ///   - completionType: completion type
+    ///   - complete: complation block (call after animation Stop)
+    public func stopAnimatingWithCompletionType(completionType: CompletionType, complete: (() -> Void)?) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.backToDefaults(completionType: completionType, setToDefaults: false, complete: complete)
+        })
     }
     
 }
@@ -197,8 +207,9 @@ private extension SSSpinnerButton {
         }
     }
     
-    
     /// collapse animation
+    ///
+    /// - Parameter complete: complation block (call after animation Stop)
     func collapseAnimation(complete: (() -> Void)?) {
         
         storedTitle = title
@@ -233,9 +244,14 @@ private extension SSSpinnerButton {
         })
         
     }
-    
+        
     /// set back to default state of button
-    func backToDefaults(completionType: CompletionType, complete: (() -> Void)?) {
+    ///
+    /// - Parameters:
+    ///   - completionType: completion type
+    ///   - setToDefaults: back to default state
+    ///   - complete: complation block (call after animation Stop)
+    func backToDefaults(completionType: CompletionType, setToDefaults: Bool, complete: (() -> Void)?) {
         if !isAnimating {
             return
         }
@@ -244,21 +260,32 @@ private extension SSSpinnerButton {
         case .none:
             self.setDefaultDataToButton(complete: complete)
             break
-        case .success, .fail, .error:
+        case .success:
             let animation: SSSpinnerAnimationDelegate = SpinnerType.checkMark.animation()
-            animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, completion: {
-                if complete != nil {
-                    complete!()
-                }
+            animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
+        case .error:
+            let animation: SSSpinnerAnimationDelegate = SpinnerType.errorMark.animation()
+            animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
+        case .fail:
+            let animation: SSSpinnerAnimationDelegate = SpinnerType.failMark.animation()
+            animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
+        }
+        
+        if setToDefaults {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.setDefaultDataToButton(complete: complete)
                 self.isUserInteractionEnabled = true
-                //                self.setDefaultDataToButton(complete: complete)
-            })
-            
+            }
+        } else {
+            self.isUserInteractionEnabled = true
         }
         
         
     }
     
+    /// set default state
+    ///
+    /// - Parameter complete: complation block (call after animation Stop)
     func setDefaultDataToButton(complete: (() -> Void)?) {
         self.removeAnimationLayer()
         setTitle(storedTitle, for: .normal)
