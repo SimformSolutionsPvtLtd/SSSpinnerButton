@@ -51,7 +51,7 @@ enum CheckMarkShape {
         case .errorMark:
             layer.lineWidth = 4
             layer.strokeColor = color.cgColor
-            layer.fillColor = UIColor.clear.cgColor
+            layer.fillColor = color.cgColor
             let centerPoint = CGPoint(x: frame.height / 2, y: frame.width / 2)
             // Line 1
             var firstPoint: CGPoint = centerPoint
@@ -67,7 +67,7 @@ enum CheckMarkShape {
             thirdPoint.x = frame.height * 0.5
             thirdPoint.y = frame.height * 0.8
             path.move(to: thirdPoint)
-            path.addArc(withCenter: thirdPoint, radius: 0.20, startAngle: 0, endAngle: CGFloat(360.toRadians), clockwise: true)
+            path.addArc(withCenter: thirdPoint, radius: 1, startAngle: 0, endAngle: CGFloat(360.toRadians), clockwise: true)
         case .failMark:
             layer.lineWidth = 2
             layer.strokeColor = color.cgColor
