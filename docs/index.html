@@ -39,6 +39,12 @@
                 <a href="Classes/SSCircleStrokeSpin.html">SSCircleStrokeSpin</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SSErrorMark.html">SSErrorMark</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SSFailMark.html">SSFailMark</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SSLineSpinFadeLoader.html">SSLineSpinFadeLoader</a>
               </li>
               <li class="nav-group-task">
@@ -48,6 +54,9 @@
                 <a href="Classes/SSSpinnerButton.html">SSSpinnerButton</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SSSuccessMark.html">SSSuccessMark</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes.html#/c:@M@SSSpinnerButton@objc(cs)SpinnerLayers">SpinnerLayers</a>
               </li>
             </ul>
@@ -55,6 +64,12 @@
           <li class="nav-group-name">
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CheckMarkShape.html">CheckMarkShape</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/CompletionType.html">CompletionType</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Enums/SpinnerShape.html">SpinnerShape</a>
               </li>
@@ -68,6 +83,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/CAGradientLayer.html">CAGradientLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/FloatingPoint.html">FloatingPoint</a>
               </li>
             </ul>
           </li>
@@ -102,6 +120,7 @@
 <li>Rounded button when spinner active</li>
 <li>Various spinner animations</li>
 <li>Dynamic spinner size</li>
+<li>Spinner with completion types (Success, fail, error)</li>
 <li>CocoaPods</li>
 </ul>
 <h1 id='requirements' class='heading'>Requirements</h1>
@@ -143,6 +162,18 @@
 
 <p><strong>StopAnimation</strong></p>
 <pre class="highlight plaintext"><code>button.stopAnimate(complete: {
+    // Your code here
+})
+</code></pre>
+
+<p><strong>StopAnimation with completion types</strong></p>
+<pre class="highlight plaintext"><code>button.stopAnimatingWithCompletionType(completionType: .success, complete: {
+    // Your code here
+})
+</code></pre>
+
+<p><strong>StopAnimation with completion types and back to defaults</strong></p>
+<pre class="highlight plaintext"><code>button.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
     // Your code here
 })
 </code></pre></li>

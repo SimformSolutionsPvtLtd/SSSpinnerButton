@@ -15,6 +15,7 @@ SSSpinnerButton is an elegant button with a different spinner animations.
   - Rounded button when spinner active
   - Various spinner animations
   - Dynamic spinner size
+  - Spinner with completion types (Success, fail, error)
   - CocoaPods
 
 # Requirements
@@ -54,7 +55,18 @@ SSSpinnerButton is an elegant button with a different spinner animations.
         button.stopAnimate(complete: {
             // Your code here
         })
+    
+    **StopAnimation with completion types**
+    
+        button.stopAnimatingWithCompletionType(completionType: .success, complete: {
+            // Your code here
+        })
         
+    **StopAnimation with completion types and back to defaults**
+    
+        button.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
+            // Your code here
+        })
 
 
 #  Contribute

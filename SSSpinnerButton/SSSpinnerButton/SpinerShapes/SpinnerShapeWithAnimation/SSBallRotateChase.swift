@@ -47,7 +47,7 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
         }
         
     }
-    
+        
     
     /// Rotate animation
     ///

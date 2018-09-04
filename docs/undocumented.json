@@ -1,166 +1,229 @@
 {
   "warnings": [
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerAnimationDelegate/SpinnerAnimationDelegate.swift",
-      "line": 14,
-      "symbol": "SSSpinnerAnimationDelegate.setupSpinnerAnimation(layer:frame:color:spinnerSize:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/Extensions.swift",
+      "line": 13,
+      "symbol": "FloatingPoint.toRadians",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSLineSpinFadeLoader.swift",
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/Extensions.swift",
+      "line": 14,
+      "symbol": "FloatingPoint.toDegree",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSLineSpinFadeLoader.swift",
       "line": 67,
       "symbol": "SSLineSpinFadeLoader.lineAt(angle:size:origin:containerSize:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 18,
+      "symbol": "CheckMarkShape.successMark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
       "line": 19,
+      "symbol": "CheckMarkShape.errorMark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 20,
+      "symbol": "CheckMarkShape.failMark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 111,
       "symbol": "SpinnerShape.ring",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
-      "line": 20,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 112,
       "symbol": "SpinnerShape.circle",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
-      "line": 21,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 113,
       "symbol": "SpinnerShape.line",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
-      "line": 22,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinerShapes/spinnerShape.swift",
+      "line": 114,
       "symbol": "SpinnerShape.stroke",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
       "line": 14,
       "symbol": "CAGradientLayer.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 20,
+      "symbol": "CompletionType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 21,
+      "symbol": "CompletionType.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 22,
+      "symbol": "CompletionType.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
       "line": 23,
+      "symbol": "CompletionType.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 24,
+      "symbol": "CompletionType.fail",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 29,
       "symbol": "SSSpinnerButton.storedTitle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 24,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 30,
       "symbol": "SSSpinnerButton.storedBackgroundNormalImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 25,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 31,
       "symbol": "SSSpinnerButton.storedBackgroundSelectedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 26,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 32,
       "symbol": "SSSpinnerButton.storedBackgroundDisabledImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 27,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 33,
       "symbol": "SSSpinnerButton.storedBackgroundHighlightedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 28,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 34,
       "symbol": "SSSpinnerButton.storedNormalImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 29,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 35,
       "symbol": "SSSpinnerButton.storedSelectedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 30,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 36,
       "symbol": "SSSpinnerButton.storedDisabledImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 31,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 37,
       "symbol": "SSSpinnerButton.storedHighlightedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 32,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 38,
       "symbol": "SSSpinnerButton.storedBackgroundColor",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 33,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 39,
       "symbol": "SSSpinnerButton.animationDuration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 35,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 41,
       "symbol": "SSSpinnerButton.isAnimating",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 37,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 43,
       "symbol": "SSSpinnerButton.spinnerType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 49,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 55,
       "symbol": "SSSpinnerButton.spinnerSize",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 71,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 77,
       "symbol": "SSSpinnerButton.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
-      "line": 85,
+      "file": "/Users/ketan.chopda/SSSpinnerButton/SSSpinnerButton/SSSpinnerButton/SpinnerButton/SSSpinnerButton.swift",
+      "line": 91,
       "symbol": "SSSpinnerButton.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/bhargav.bajani/Documents/Data/BitBucketData/SSSpinnerButtons"
+  "source_directory": "/Users/ketan.chopda/SSSpinnerButton"
 }
