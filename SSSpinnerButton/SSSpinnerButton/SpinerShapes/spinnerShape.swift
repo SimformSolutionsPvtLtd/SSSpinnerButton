@@ -30,23 +30,23 @@ enum CheckMarkShape {
         let path: UIBezierPath = UIBezierPath()
         switch self {
         case .successMark:
-            layer.lineWidth = 2
+            layer.lineWidth = 2.5
             layer.strokeColor = color.cgColor
             layer.fillColor = UIColor.clear.cgColor
             let centerPoint = CGPoint(x: frame.height / 2, y: frame.width / 2)
             var firstPoint: CGPoint = centerPoint
             // Line 1
-            firstPoint.x = frame.height * 0.15
-            firstPoint.y = frame.height / 2
+            firstPoint.x = frame.height * 0.2
+            firstPoint.y = frame.height * 0.5
             path.move(to: firstPoint)
             var secondPoint: CGPoint = centerPoint
-            secondPoint.x = frame.height / 3
-            secondPoint.y = frame.height * 0.85
+            secondPoint.x = frame.height * 0.35
+            secondPoint.y = frame.height * 0.75
             path.addLine(to: secondPoint)
             // Line 2
             var thirdPoint: CGPoint = centerPoint
-            thirdPoint.x = frame.height * 0.85
-            thirdPoint.y = frame.height / 4
+            thirdPoint.x = frame.height * 0.75
+            thirdPoint.y = frame.height * 0.35
             path.addLine(to: thirdPoint)
         case .errorMark:
             layer.lineWidth = 4
@@ -67,9 +67,9 @@ enum CheckMarkShape {
             thirdPoint.x = frame.height * 0.5
             thirdPoint.y = frame.height * 0.8
             path.move(to: thirdPoint)
-            path.addArc(withCenter: thirdPoint, radius: 1, startAngle: 0, endAngle: CGFloat(360.toRadians), clockwise: true)
+            path.addArc(withCenter: thirdPoint, radius: 0.8, startAngle: 0, endAngle: CGFloat(360.toRadians), clockwise: true)
         case .failMark:
-            layer.lineWidth = 2
+            layer.lineWidth = 2.5
             layer.strokeColor = color.cgColor
             layer.fillColor = UIColor.clear.cgColor
             let centerPoint = CGPoint(x: frame.height / 2, y: frame.width / 2)

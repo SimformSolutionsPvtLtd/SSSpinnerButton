@@ -59,7 +59,13 @@ SSSpinnerButton is an elegant button with a different spinner animations.
     **StopAnimation with completion types**
     
         button.stopAnimatingWithCompletionType(completionType: .success, complete: {
-        // Your code here
+            // Your code here
+        })
+        
+    **StopAnimation with completion types and back to defaults**
+    
+        button.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
+            // Your code here
         })
 
 
