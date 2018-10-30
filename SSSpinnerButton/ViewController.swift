@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
 
+        
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
         
         // MARK: Start Animating

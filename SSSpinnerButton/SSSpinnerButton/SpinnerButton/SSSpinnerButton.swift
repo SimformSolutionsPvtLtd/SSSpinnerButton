@@ -27,6 +27,7 @@ public enum CompletionType {
 open class SSSpinnerButton: UIButton {
     // MARK: - Properties
     internal var storedTitle: String?
+    internal var storedAttributedTitle: NSAttributedString?
     internal var storedBackgroundNormalImage: UIImage?
     internal var storedBackgroundSelectedImage: UIImage?
     internal var storedBackgroundDisabledImage: UIImage?
@@ -60,6 +61,16 @@ open class SSSpinnerButton: UIButton {
         }
         set {
             self.setTitle(newValue, for: .normal)
+        }
+    }
+    
+    
+    /// Sets the button attributed title for its normal state
+    public var attributedTitle: NSAttributedString? {
+        get {
+            return self.attributedTitle(for: .normal)
+        } set {
+            self.setAttributedTitle(newValue, for: .normal)
         }
     }
     
@@ -224,6 +235,9 @@ private extension SSSpinnerButton {
         
         storedTitle = title
         title = ""
+        
+        storedAttributedTitle = attributedTitle
+        attributedTitle = nil
         storedBackgroundNormalImage = self.backgroundImage(for: .normal)
         storedBackgroundDisabledImage = self.backgroundImage(for: .disabled)
         storedBackgroundSelectedImage = self.backgroundImage(for: .selected)
@@ -299,6 +313,9 @@ private extension SSSpinnerButton {
     func setDefaultDataToButton(complete: (() -> Void)?) {
         self.removeAnimationLayer()
         setTitle(storedTitle, for: .normal)
+        if self.storedAttributedTitle != nil {
+            self.setAttributedTitle(self.storedAttributedTitle, for: .normal)
+        }
         self.setBackgroundImage(self.storedBackgroundNormalImage, for: .normal)
         self.setBackgroundImage(self.storedBackgroundDisabledImage, for: .disabled)
         self.setBackgroundImage(self.storedBackgroundSelectedImage, for: .selected)
