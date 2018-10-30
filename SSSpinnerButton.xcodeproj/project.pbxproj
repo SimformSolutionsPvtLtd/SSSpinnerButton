@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5189267820C96E9F0016E3A0 /* SSFailMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189267720C96E9F0016E3A0 /* SSFailMark.swift */; };
-		519A451220C6A0FD00BD9352 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5E420C64ED3000F4BCD /* Info.plist */; };
 		519A451320C6A15D00BD9352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DC20C64ED3000F4BCD /* Main.storyboard */; };
 		51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */; };
 		51AAA5DB20C64ED3000F4BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5DA20C64ED3000F4BCD /* ViewController.swift */; };
@@ -214,7 +213,6 @@
 				519A451320C6A15D00BD9352 /* Main.storyboard in Resources */,
 				51AAA5E320C64ED3000F4BCD /* LaunchScreen.storyboard in Resources */,
 				51AAA5E020C64ED3000F4BCD /* Assets.xcassets in Resources */,
-				519A451220C6A0FD00BD9352 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
