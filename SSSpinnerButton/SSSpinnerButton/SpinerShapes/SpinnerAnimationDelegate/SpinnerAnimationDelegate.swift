@@ -20,4 +20,5 @@ protocol SSSpinnerAnimationDelegate {
     ///   - color: color of spinner
     ///   - spinnerSize: size of spinner layer
     func setupSpinnerAnimation(layer: CALayer, frame: CGRect, color: UIColor, spinnerSize: UInt?)
+
 }
