@@ -9,14 +9,6 @@
 import Foundation
 import UIKit
 
-// MARK: - 
-extension CAGradientLayer {
-    convenience init(frame: CGRect) {
-        self.init()
-        self.frame = frame
-    }
-}
-
 public enum CompletionType {
     case none
     case success
@@ -26,8 +18,16 @@ public enum CompletionType {
 ///
 open class SSSpinnerButton: UIButton {
     // MARK: - Properties
-    internal var storedTitle: String?
-    internal var storedAttributedTitle: NSAttributedString?
+    internal var storedNormalTitle: String?
+    internal var storedSelectedTitle: String?
+    internal var storedDisableTitle: String?
+    internal var storedHighlitedTitle: String?
+    
+    internal var storedAttributedNormalTitle: NSAttributedString?
+    internal var storedAttributedSelectedTitle: NSAttributedString?
+    internal var storedAttributedDisableTitle: NSAttributedString?
+    internal var storedAttributedHighlitedTitle: NSAttributedString?
+    
     internal var storedBackgroundNormalImage: UIImage?
     internal var storedBackgroundSelectedImage: UIImage?
     internal var storedBackgroundDisabledImage: UIImage?
@@ -55,22 +55,79 @@ open class SSSpinnerButton: UIButton {
     
     var spinnerSize: UInt?
     /// Sets the button title for its normal state
-    public var title: String? {
+    public var normalTitle: String? {
         get {
             return self.title(for: .normal)
         }
         set {
+            
             self.setTitle(newValue, for: .normal)
         }
     }
     
+    /// Sets the button title for its selected state
+    public var selectedTitle: String? {
+        get {
+            return self.title(for: .selected)
+        }
+        set {
+            self.setTitle(newValue, for: .selected)
+        }
+    }
+    
+    /// Sets the button title for its disabled state
+    public var disabledTitle: String? {
+        get {
+            return self.title(for: .disabled)
+        }
+        set {
+            self.setTitle(newValue, for: .disabled)
+        }
+    }
+    
+    /// Sets the button title for its highlighted state
+    public var highlightedTitle: String? {
+        get {
+            return self.title(for: .highlighted)
+        }
+        set {
+            self.setTitle(newValue, for: .highlighted)
+        }
+    }
     
     /// Sets the button attributed title for its normal state
-    public var attributedTitle: NSAttributedString? {
+    public var attributedNormalTitle: NSAttributedString? {
         get {
             return self.attributedTitle(for: .normal)
         } set {
             self.setAttributedTitle(newValue, for: .normal)
+        }
+    }
+    
+    /// Sets the button attributed title for its normal state
+    public var attributedSelectedTitle: NSAttributedString? {
+        get {
+            return self.attributedTitle(for: .selected)
+        } set {
+            self.setAttributedTitle(newValue, for: .selected)
+        }
+    }
+
+    /// Sets the button attributed title for its normal state
+    public var attributedDisableTitle: NSAttributedString? {
+        get {
+            return self.attributedTitle(for: .disabled)
+        } set {
+            self.setAttributedTitle(newValue, for: .disabled)
+        }
+    }
+    
+    /// Sets the button attributed title for its normal state
+    public var attributedHighlitedTitle: NSAttributedString? {
+        get {
+            return self.attributedTitle(for: .highlighted)
+        } set {
+            self.setAttributedTitle(newValue, for: .highlighted)
         }
     }
     
@@ -101,25 +158,6 @@ open class SSSpinnerButton: UIButton {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        clipsToBounds = true
-        gradientLayer.frame = self.bounds
-    }
-    
-    
-    /// Gradient 
-    internal lazy var gradientLayer: CAGradientLayer = {
-        let gradient = CAGradientLayer(frame: self.frame)
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 1.0, y: 1.0)
-        self.layer.insertSublayer(gradient, at: 0)
-        return gradient
-    }()
-    
-    /// Sets the colors for the gradient background
-    public var gradientColors: [UIColor]? {
-        willSet {
-            gradientLayer.colors = newValue?.map({$0.cgColor})
-        }
     }
     
 }
@@ -133,10 +171,18 @@ private extension SSSpinnerButton {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
+        if layer.sublayers != nil {
+            
+            for item in layer.sublayers! where item is CAGradientLayer {
+                
+                item.cornerRadius = self.cornrRadius
+                item.masksToBounds = true
+            }
+        }
         self.layer.cornerRadius = self.cornrRadius
         self.layer.masksToBounds = true
         
-        if self.image(for: .normal) != nil && self.title != nil {
+        if self.image(for: .normal) != nil && self.normalTitle != nil {
             let spacing: CGFloat = 10
             // the amount of spacing to appear between image and title\
             self.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: spacing)
@@ -178,6 +224,14 @@ public extension SSSpinnerButton {
         self.spinnerSize = spinnerSize
         
         self.layer.cornerRadius = self.frame.height / 2
+        if layer.sublayers != nil {
+            
+            for item in layer.sublayers! where item is CAGradientLayer {
+            
+                item.cornerRadius = self.frame.height / 2
+            
+            }
+        }
         self.collapseAnimation(complete: complete)
         
     }
@@ -233,31 +287,61 @@ private extension SSSpinnerButton {
     /// - Parameter complete: complation block (call after animation Stop)
     func collapseAnimation(complete: (() -> Void)?) {
         
-        storedTitle = title
-        title = ""
+        storedNormalTitle = normalTitle
+        normalTitle = nil
         
-        storedAttributedTitle = attributedTitle
-        attributedTitle = nil
+        storedSelectedTitle = selectedTitle
+        selectedTitle = nil
+        
+        storedDisableTitle = disabledTitle
+        disabledTitle = nil
+        
+        storedHighlitedTitle = highlightedTitle
+        highlightedTitle = nil
+        
+        storedAttributedNormalTitle = attributedNormalTitle
+        attributedNormalTitle = nil
+        
+        storedAttributedSelectedTitle = attributedSelectedTitle
+        attributedSelectedTitle = nil
+        
+        storedAttributedDisableTitle = attributedDisableTitle
+        attributedDisableTitle = nil
+        
+        storedAttributedHighlitedTitle = attributedHighlitedTitle
+        attributedHighlitedTitle = nil
+        
+        
         storedBackgroundNormalImage = self.backgroundImage(for: .normal)
         storedBackgroundDisabledImage = self.backgroundImage(for: .disabled)
         storedBackgroundSelectedImage = self.backgroundImage(for: .selected)
         storedBackgroundHighlightedImage = self.backgroundImage(for: .highlighted)
+        
         storedNormalImage = self.image(for: .normal)
         storedDisabledImage = self.image(for: .disabled)
         storedSelectedImage = self.image(for: .selected)
         storedHighlightedImage = self.image(for: .highlighted)
+        
         storedBackgroundColor = self.backgroundColor
+        
         self.setImage(nil, for: .normal)
         self.setImage(nil, for: .disabled)
         self.setImage(nil, for: .selected)
         self.setImage(nil, for: .highlighted)
         isUserInteractionEnabled = false
+        
         let animaton = CABasicAnimation(keyPath: "bounds.size.width")
         animaton.fromValue = bounds.width
         animaton.toValue =  bounds.height
         animaton.duration = animationDuration
         animaton.fillMode = kCAFillModeBoth
         animaton.isRemovedOnCompletion = false
+        if layer.sublayers != nil {
+            
+            for item in layer.sublayers! where item is CAGradientLayer {
+                item.add(animaton, forKey: animaton.keyPath)
+            }
+        }
         layer.add(animaton, forKey: animaton.keyPath)
         self.perform(#selector(startSpinner), with: nil, afterDelay: animationDuration)
         
@@ -285,13 +369,13 @@ private extension SSSpinnerButton {
             self.setDefaultDataToButton(complete: complete)
             break
         case .success:
-            let animation: SSSpinnerAnimationDelegate = SpinnerType.checkMark.animation()
+            let animation: SSSpinnerAnimationDelegate = SpinnerCompletionType.checkMark.animation()
             animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
         case .error:
-            let animation: SSSpinnerAnimationDelegate = SpinnerType.errorMark.animation()
+            let animation: SSSpinnerAnimationDelegate = SpinnerCompletionType.errorMark.animation()
             animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
         case .fail:
-            let animation: SSSpinnerAnimationDelegate = SpinnerType.failMark.animation()
+            let animation: SSSpinnerAnimationDelegate = SpinnerCompletionType.failMark.animation()
             animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
         }
         
@@ -311,34 +395,61 @@ private extension SSSpinnerButton {
     ///
     /// - Parameter complete: complation block (call after animation Stop)
     func setDefaultDataToButton(complete: (() -> Void)?) {
+        
+        
         self.removeAnimationLayer()
-        setTitle(storedTitle, for: .normal)
-        if self.storedAttributedTitle != nil {
-            self.setAttributedTitle(self.storedAttributedTitle, for: .normal)
+        self.setTitle(self.storedNormalTitle, for: .normal)
+        self.setTitle(self.storedSelectedTitle, for: .selected)
+        self.setTitle(self.storedDisableTitle, for: .disabled)
+        self.setTitle(self.storedHighlitedTitle, for: .highlighted)
+        
+        if self.storedAttributedNormalTitle != nil {
+            self.setAttributedTitle(self.storedAttributedNormalTitle, for: .normal)
         }
+        
+        if self.storedAttributedSelectedTitle != nil {
+            self.setAttributedTitle(self.storedAttributedSelectedTitle, for: .selected)
+        }
+        
+        if self.storedAttributedDisableTitle != nil {
+            self.setAttributedTitle(self.storedAttributedDisableTitle, for: .disabled)
+        }
+       
+        if self.storedAttributedHighlitedTitle != nil {
+            self.setAttributedTitle(self.storedAttributedHighlitedTitle, for: .highlighted)
+        }
+        
         self.setBackgroundImage(self.storedBackgroundNormalImage, for: .normal)
         self.setBackgroundImage(self.storedBackgroundDisabledImage, for: .disabled)
         self.setBackgroundImage(self.storedBackgroundSelectedImage, for: .selected)
         self.setBackgroundImage(self.storedBackgroundHighlightedImage, for: .highlighted)
-        self.setImage(storedNormalImage, for: .normal)
-        self.setImage(storedDisabledImage, for: .disabled)
-        self.setImage(storedSelectedImage, for: .selected)
-        self.setImage(storedHighlightedImage, for: .highlighted)
-        isUserInteractionEnabled = true
+        self.setImage(self.storedNormalImage, for: .normal)
+        self.setImage(self.storedDisabledImage, for: .disabled)
+        self.setImage(self.storedSelectedImage, for: .selected)
+        self.setImage(self.storedHighlightedImage, for: .highlighted)
+        self.isUserInteractionEnabled = true
         
         let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.fromValue = frame.height
-        animation.toValue = frame.width
-        animation.duration = animationDuration
+        animation.fromValue = self.frame.height
+        animation.toValue = self.frame.width
+        animation.duration = self.animationDuration
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
         
-        layer.add(animation, forKey: animation.keyPath)
-        isAnimating = false
+        self.layer.add(animation, forKey: animation.keyPath)
+        if self.layer.sublayers != nil {
+            
+            for item in self.layer.sublayers! where item is CAGradientLayer {
+                item.add(animation, forKey: animation.keyPath)
+                item.cornerRadius = self.cornrRadius
+            }
+        }
+        self.isAnimating = false
         self.layer.cornerRadius = self.cornrRadius
         if complete != nil {
             complete!()
-        }
+            }
+        
     }
     
     /// start spinner
