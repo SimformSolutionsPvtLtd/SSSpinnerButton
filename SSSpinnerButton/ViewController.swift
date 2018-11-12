@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,8 +29,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
-
-        
+        sender.isSelected = !sender.isSelected
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
         
         // MARK: Start Animating
