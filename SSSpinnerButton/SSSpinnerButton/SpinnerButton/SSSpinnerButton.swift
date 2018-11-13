@@ -55,6 +55,7 @@ open class SSSpinnerButton: UIButton {
     
     var spinnerSize: UInt?
     /// Sets the button title for its normal state
+    
     public var normalTitle: String? {
         get {
             return self.title(for: .normal)
@@ -128,16 +129,6 @@ open class SSSpinnerButton: UIButton {
             return self.attributedTitle(for: .highlighted)
         } set {
             self.setAttributedTitle(newValue, for: .highlighted)
-        }
-    }
-    
-    /// Sets the button title color.
-    public var titleColor: UIColor? {
-        get {
-            return self.titleColor
-        }
-        set {
-            self.setTitleColor(newValue, for: .normal)
         }
     }
     
@@ -334,7 +325,7 @@ private extension SSSpinnerButton {
         animaton.fromValue = bounds.width
         animaton.toValue =  bounds.height
         animaton.duration = animationDuration
-        animaton.fillMode = kCAFillModeBoth
+        animaton.fillMode = CAMediaTimingFillMode.both
         animaton.isRemovedOnCompletion = false
         if layer.sublayers != nil {
             
@@ -433,7 +424,7 @@ private extension SSSpinnerButton {
         animation.fromValue = self.frame.height
         animation.toValue = self.frame.width
         animation.duration = self.animationDuration
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
         
         self.layer.add(animation, forKey: animation.keyPath)
