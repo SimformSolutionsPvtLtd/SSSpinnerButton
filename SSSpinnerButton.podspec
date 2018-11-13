@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   #s.source       = { :path => ".", :tag => "#{s.version}" }
 
   s.source_files  = 'SSSpinnerButton/SSSpinnerButton/**/*.swift'
-  #s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  #s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
   s.documentation_url = 'docs/index.html'
 
 
