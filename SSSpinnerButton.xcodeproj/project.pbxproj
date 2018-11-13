@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5189267820C96E9F0016E3A0 /* SSFailMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189267720C96E9F0016E3A0 /* SSFailMark.swift */; };
 		519A451320C6A15D00BD9352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DC20C64ED3000F4BCD /* Main.storyboard */; };
+		519BCB68219A946600F50E26 /* SSFailMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BCB67219A946600F50E26 /* SSFailMark.swift */; };
 		51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */; };
 		51AAA5DB20C64ED3000F4BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5DA20C64ED3000F4BCD /* ViewController.swift */; };
 		51AAA5E020C64ED3000F4BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA5DF20C64ED3000F4BCD /* Assets.xcassets */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5189267720C96E9F0016E3A0 /* SSFailMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSFailMark.swift; path = SSSpinnerButton/SSSpinnerButton/SpinerShapes/SSFailMark.swift; sourceTree = SOURCE_ROOT; };
+		519BCB67219A946600F50E26 /* SSFailMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSFailMark.swift; sourceTree = "<group>"; };
 		51AAA5D520C64ED3000F4BCD /* SSSpinnerButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSSpinnerButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AAA5D820C64ED3000F4BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51AAA5DA20C64ED3000F4BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,12 +129,12 @@
 		51AAA5F020C64EF0000F4BCD /* SpinnerShapeWithAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				519BCB67219A946600F50E26 /* SSFailMark.swift */,
 				51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */,
 				51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */,
 				51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */,
 				51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */,
 				51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */,
-				5189267720C96E9F0016E3A0 /* SSFailMark.swift */,
 				730FA84E2136AD4800F6116F /* SSSuccessMark.swift */,
 				737852F82137B12B005A1EA6 /* SSErrorMark.swift */,
 			);
@@ -177,11 +177,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Simform Solutions";
 				TargetAttributes = {
 					51AAA5D420C64ED3000F4BCD = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -248,12 +249,12 @@
 				51AAA5D920C64ED3000F4BCD /* AppDelegate.swift in Sources */,
 				51AAA5FB20C64EF0000F4BCD /* spinnerShape.swift in Sources */,
 				51AAA60220C64EF0000F4BCD /* SSSpinnerButton.swift in Sources */,
+				519BCB68219A946600F50E26 /* SSFailMark.swift in Sources */,
 				51AAA5FE20C64EF0000F4BCD /* SSCircleStrokeSpin.swift in Sources */,
 				51AAA5FD20C64EF0000F4BCD /* SSBallSpinFadeLoader.swift in Sources */,
 				51AAA60120C64EF0000F4BCD /* SpinnerTypes.swift in Sources */,
 				737852FB2137C745005A1EA6 /* Extensions.swift in Sources */,
 				51AAA5FF20C64EF0000F4BCD /* SSLineSpinFadeLoader.swift in Sources */,
-				5189267820C96E9F0016E3A0 /* SSFailMark.swift in Sources */,
 				51AAA5F920C64EF0000F4BCD /* SpinnerAnimationDelegate.swift in Sources */,
 				51AAA60020C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift in Sources */,
 			);
@@ -295,6 +296,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -302,6 +304,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -352,6 +355,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -359,6 +363,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -399,7 +404,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -415,7 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -434,6 +439,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -441,6 +447,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -488,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Analyze;
