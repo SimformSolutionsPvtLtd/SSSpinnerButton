@@ -431,8 +431,8 @@ private extension SSSpinnerButton {
         self.isUserInteractionEnabled = true
         
         let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.fromValue = storedHeight // self.frame.height
-        animation.toValue = storedWidth // self.frame.width
+        animation.fromValue = storedHeight
+        animation.toValue = storedWidth
         animation.duration = self.animationDuration
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
