@@ -43,6 +43,9 @@ open class SSSpinnerButton: UIButton {
     
     fileprivate var spinnerType: SpinnerType = .ballClipRotate
     
+    fileprivate var storedWidth: CGFloat?
+    fileprivate var storedHeight: CGFloat?
+    
     /// Sets the button corner radius
     @IBInspectable var cornrRadius: CGFloat = 0 {
         willSet {
@@ -314,6 +317,8 @@ private extension SSSpinnerButton {
         storedHighlightedImage = self.image(for: .highlighted)
         
         storedBackgroundColor = self.backgroundColor
+        storedWidth = frame.width
+        storedHeight = frame.height
         
         self.setImage(nil, for: .normal)
         self.setImage(nil, for: .disabled)
@@ -358,7 +363,7 @@ private extension SSSpinnerButton {
         switch completionType {
         case .none:
             self.setDefaultDataToButton(complete: complete)
-            break
+            return
         case .success:
             let animation: SSSpinnerAnimationDelegate = SpinnerCompletionType.checkMark.animation()
             animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
@@ -370,16 +375,21 @@ private extension SSSpinnerButton {
             animation.setupSpinnerAnimation(layer: self.layer, frame: self.frame, color: self.spinnerColor, spinnerSize: self.spinnerSize)
         }
         
-        if setToDefaults {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.setDefaultDataToButton(complete: complete)
+        if completionType != .none {
+            if setToDefaults {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.setDefaultDataToButton(complete: complete)
+                    self.isUserInteractionEnabled = true
+                }
+            } else {
+                
+                if complete != nil {
+                    complete!()
+                }
                 self.isUserInteractionEnabled = true
             }
-        } else {
-            self.isUserInteractionEnabled = true
         }
-        
-        
+        self.isUserInteractionEnabled = true
     }
     
     /// set default state
@@ -421,8 +431,8 @@ private extension SSSpinnerButton {
         self.isUserInteractionEnabled = true
         
         let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.fromValue = self.frame.height
-        animation.toValue = self.frame.width
+        animation.fromValue = storedHeight
+        animation.toValue = storedWidth
         animation.duration = self.animationDuration
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
