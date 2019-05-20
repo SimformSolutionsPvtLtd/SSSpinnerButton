@@ -41,7 +41,7 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 # Usage example
 
 -   In the storyboard add a UIButton and change its class to SSSpinnerButton
--   ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true)
+   ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true)
    
     **StartAnimation**
 
