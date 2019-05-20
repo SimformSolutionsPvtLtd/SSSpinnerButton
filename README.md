@@ -68,7 +68,12 @@ SSSpinnerButton is an elegant button with a different spinner animations.
             // Your code here
         })
 
+**Migration**
+Version 3.0.0
+This version requires Xcode 10.2 and Swift 5.0.
 
+Version 2.0.1
+This version requires Xcode 10.1 and Swift 4.2.
 #  Contribute
 -   We would love you for the contribution to SSspinnerButton, check the LICENSE file for more info.
  
