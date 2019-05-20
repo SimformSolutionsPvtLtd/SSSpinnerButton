@@ -195,7 +195,7 @@ public extension SSSpinnerButton {
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
     ///   - complete: complation block (call after animation start)
-    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
+    func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
         self.startAnimate(spinnerType: spinnerType, spinnercolor: spinnercolor, spinnerSize: nil, complete: complete)
     }
     
@@ -206,7 +206,7 @@ public extension SSSpinnerButton {
     ///   - spinnercolor: color of spinner (default = gray)
     ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
-    public func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
+    func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -233,7 +233,7 @@ public extension SSSpinnerButton {
     /// stop animation and set button in actual state
     ///
     /// - Parameter complete: complation block (call after animation Stop)
-    public func stopAnimate(complete: (() -> Void)?) {
+    func stopAnimate(complete: (() -> Void)?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.backToDefaults(completionType: .none, setToDefaults: false, complete: complete)
         })
@@ -245,7 +245,7 @@ public extension SSSpinnerButton {
     ///   - completionType: completion type
     ///   - backToDefaults: back to default state
     ///   - complete: complation block (call after animation Stop)
-    public func stopAnimationWithCompletionTypeAndBackToDefaults(completionType: CompletionType, backToDefaults: Bool, complete: (() -> Void)?) {
+    func stopAnimationWithCompletionTypeAndBackToDefaults(completionType: CompletionType, backToDefaults: Bool, complete: (() -> Void)?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.backToDefaults(completionType: completionType, setToDefaults: backToDefaults, complete: complete)
         })
@@ -256,7 +256,7 @@ public extension SSSpinnerButton {
     /// - Parameters:
     ///   - completionType: completion type
     ///   - complete: complation block (call after animation Stop)
-    public func stopAnimatingWithCompletionType(completionType: CompletionType, complete: (() -> Void)?) {
+    func stopAnimatingWithCompletionType(completionType: CompletionType, complete: (() -> Void)?) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.backToDefaults(completionType: completionType, setToDefaults: false, complete: complete)
         })

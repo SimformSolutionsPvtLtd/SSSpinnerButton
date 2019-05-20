@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "SSSpinnerButton"
-  s.version      = "2.0.1"
+  s.version      = "3.0.1"
   s.summary      = "SSSpinnerButton is an elegant button with a different spinner animations."
 
   #s.description  = "SSSpinnerButton is an elegant button with a different spinner animations."
@@ -22,14 +22,14 @@ Pod::Spec.new do |s|
   s.platform     = :ios  
   
   s.ios.deployment_target = "10.0"
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
 
   s.source       = { :git => "https://github.com/simformsolutions/SSSpinnerButton.git", :tag => "#{s.version}" }
   #s.source       = { :path => ".", :tag => "#{s.version}" }
 
   s.source_files  = 'SSSpinnerButton/SSSpinnerButton/**/*.swift'
-  # s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.documentation_url = 'docs/index.html'
 
 
