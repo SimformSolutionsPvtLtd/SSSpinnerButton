@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSSpinnerButton
 
 class ViewController: UIViewController {
 
