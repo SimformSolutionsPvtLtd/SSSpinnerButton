@@ -34,6 +34,10 @@ SSSpinnerButton is an elegant button with a different spinner animations.
        import UIKit
        import SSSpinnerButton
 
+**Carthage**
+
+Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
+
 **Manually**
 -   Download and drop **SSSpinnerButton** folder in your project.
 -   Congratulations!
