@@ -41,7 +41,7 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 # Usage example
 
 -   In the storyboard add a UIButton and change its class to SSSpinnerButton
--   ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true)
+   ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SpinnerButtonStoryBoard.png?raw=true)
    
     **StartAnimation**
 
@@ -68,7 +68,12 @@ SSSpinnerButton is an elegant button with a different spinner animations.
             // Your code here
         })
 
+# Migration
+**Version 3.0.1**
+- This version requires Xcode 10.2 and Swift 5.0.
 
+**Version 2.0.1**
+- This version requires Xcode 10.1 and Swift 4.2.
 #  Contribute
 -   We would love you for the contribution to SSspinnerButton, check the LICENSE file for more info.
  
@@ -80,7 +85,7 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 -   Spinner animations inspired from [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
 
     
-[swift-image]:https://img.shields.io/badge/swift-4.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
