@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SSSpinnerButton" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SSSpinnerButton_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="L6t-dE-3h7">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="360"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.97647058823529409" green="0.58039215686274503" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -42,7 +42,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSs-Ty-TWf"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-V5-Ctm" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-V5-Ctm" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="70" width="135" height="80"/>
                                                 <color key="backgroundColor" red="0.37647058823529411" green="0.90196078431372551" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -55,7 +55,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOB-Yz-e4A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-0X-zpK" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-0X-zpK" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="180" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.62352941176470589" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -68,7 +68,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Gm-NO-Xxj"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="250" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.84313725490196079" green="0.61176470588235299" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -81,7 +81,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsZ-lv-Kv3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="320" width="135" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.78431372549019607" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -100,7 +100,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-h8-XhK">
                                         <rect key="frame" x="145" y="0.0" width="135" height="360"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-OB-5yI" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-OB-5yI" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.58039215690000001" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -113,7 +113,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fa-pm-Ps1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6J-Qu-XOe" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6J-Qu-XOe" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="70" width="135" height="80"/>
                                                 <color key="backgroundColor" red="0.37647058820000001" green="0.90196078430000004" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -126,7 +126,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zJi-hV-X4n"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-TA-pFn" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-TA-pFn" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="180" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.62352941179999999" green="0.72941176470000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -139,7 +139,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTA-KA-v0o"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-5s-xGv" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-5s-xGv" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="250" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.84313725490000002" green="0.61176470589999998" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -152,7 +152,7 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="auD-Zh-w7p"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRc-D7-CNH" customClass="SSSpinnerButton" customModule="SSSpinnerButton" customModuleProvider="target">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRc-D7-CNH" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
                                                 <rect key="frame" x="0.0" y="320" width="135" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.7843137255" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
