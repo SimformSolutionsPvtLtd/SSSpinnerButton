@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
         sender.isSelected = !sender.isSelected
-        let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin]
+        let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .circlePulseSpin, .circleWaveSpin]
         
         // MARK: Start Animating
         sender.startAnimate(spinnerType: arr[sender.tag], spinnercolor: .white, spinnerSize: 20, complete: nil)
