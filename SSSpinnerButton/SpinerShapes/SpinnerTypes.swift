@@ -56,7 +56,7 @@ public enum SpinnerType: Int {
      
      - returns: Instance of SSCircleStrokeSpin.
      */
-    case circlePulseSpin
+    case circleScaleMultiple
     
     /**
      CirclePulseSpin.
@@ -64,6 +64,7 @@ public enum SpinnerType: Int {
      - returns: Instance of SSCircleStrokeSpin.
      */
     case circleWaveSpin
+    case pacman
     
     /// Animation of spinner
     ///
@@ -80,10 +81,12 @@ public enum SpinnerType: Int {
             return SSBallRotateChase()
         case .circleStrokeSpin:
             return SSCircleStrokeSpin()
-        case .circlePulseSpin:
-            return SSCirclePulse()
+        case .circleScaleMultiple:
+            return SSCircleScaleMultiple()
         case .circleWaveSpin:
             return SSCircleWaveSpin()
+        case .pacman:
+        return SSPacman()
         }
     }
     

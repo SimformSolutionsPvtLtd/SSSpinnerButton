@@ -30,7 +30,8 @@
 		07FAD2B022A06F7E00FC1F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD2A922A06F7E00FC1F9E /* Main.storyboard */; };
 		07FAD2B122A06F7E00FC1F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAD2AB22A06F7E00FC1F9E /* AppDelegate.swift */; };
 		51AAA60420C65EA5000F4BCD /* .tailor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA60320C65EA5000F4BCD /* .tailor.yml */; };
-		D3B313BE262947E600373967 /* SSCirclePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B313BD262947E600373967 /* SSCirclePulse.swift */; };
+		D346F19628242F900085293D /* SSPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19528242F900085293D /* SSPacman.swift */; };
+		D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */; };
 		D3D692F22629BDFD0032EB92 /* SSCircleWaveSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +85,8 @@
 		730FA84E2136AD4800F6116F /* SSSuccessMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSuccessMark.swift; sourceTree = "<group>"; };
 		737852F82137B12B005A1EA6 /* SSErrorMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSErrorMark.swift; sourceTree = "<group>"; };
 		737852FA2137C745005A1EA6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D3B313BD262947E600373967 /* SSCirclePulse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCirclePulse.swift; sourceTree = "<group>"; };
+		D346F19528242F900085293D /* SSPacman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSPacman.swift; sourceTree = "<group>"; };
+		D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SSCircleScaleMultiple.swift; path = ../../../../../../Desktop/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSCircleScaleMultiple.swift; sourceTree = "<group>"; };
 		D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCircleWaveSpin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,12 +179,13 @@
 				519BCB67219A946600F50E26 /* SSFailMark.swift */,
 				51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */,
 				51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */,
+				D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */,
 				51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */,
 				51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */,
 				51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */,
 				730FA84E2136AD4800F6116F /* SSSuccessMark.swift */,
 				737852F82137B12B005A1EA6 /* SSErrorMark.swift */,
-				D3B313BD262947E600373967 /* SSCirclePulse.swift */,
+				D346F19528242F900085293D /* SSPacman.swift */,
 				D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */,
 			);
 			path = SpinnerShapeWithAnimation;
@@ -331,16 +334,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */,
 				07FAD29E22A0679B00FC1F9E /* SSSuccessMark.swift in Sources */,
 				07FAD2A022A067A300FC1F9E /* SpinnerTypes.swift in Sources */,
 				07FAD29822A0678800FC1F9E /* SSFailMark.swift in Sources */,
 				07FAD2A222A067AC00FC1F9E /* SSSpinnerButton.swift in Sources */,
-				D3B313BE262947E600373967 /* SSCirclePulse.swift in Sources */,
 				07FAD29A22A0678E00FC1F9E /* SSBallSpinFadeLoader.swift in Sources */,
 				07FAD29B22A0679200FC1F9E /* SSCircleStrokeSpin.swift in Sources */,
 				07FAD29722A0678300FC1F9E /* spinnerShape.swift in Sources */,
 				D3D692F22629BDFD0032EB92 /* SSCircleWaveSpin.swift in Sources */,
 				07FAD29D22A0679800FC1F9E /* SSSpinnerBallClipRotate.swift in Sources */,
+				D346F19628242F900085293D /* SSPacman.swift in Sources */,
 				07FAD29C22A0679500FC1F9E /* SSLineSpinFadeLoader.swift in Sources */,
 				07FAD2A122A067A600FC1F9E /* Extensions.swift in Sources */,
 				07FAD29922A0678A00FC1F9E /* SSBallRotateChase.swift in Sources */,
