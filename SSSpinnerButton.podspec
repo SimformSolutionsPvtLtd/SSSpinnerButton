@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/simformsolutions/SSSpinnerButton.git", :tag => "#{s.version}" }
   #s.source       = { :path => ".", :tag => "#{s.version}" }
 
-  s.source_files  = 'SSSpinnerButton/**/*.swift'
+  s.source_files  = 'Sources/SSSpinnerButton/**/*.swift'
   #s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.documentation_url = 'docs/index.html'
 
