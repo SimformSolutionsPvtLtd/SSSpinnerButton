@@ -1,4 +1,4 @@
-# SSspinnerButton
+# SSSpinnerButton
 
 
 SSSpinnerButton is an elegant button with a different spinner animations.
