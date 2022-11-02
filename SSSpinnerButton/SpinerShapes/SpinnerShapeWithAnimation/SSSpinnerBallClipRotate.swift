@@ -44,7 +44,8 @@ class SSSpinnerBallClipRotate: SSSpinnerAnimationDelegate {
         rotateAnimation.values = [0, Double.pi, 2 * Double.pi].map { NSNumber(value: $0) }
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = 1
-        animationGroup.repeatCount = .infinity
+        animationGroup.repeatCount = HUGE
+        animationGroup.isRemovedOnCompletion = false
         animationGroup.animations = [scaleAnimation, rotateAnimation]
         ballClip.add(animationGroup, forKey: "animation")
     }
