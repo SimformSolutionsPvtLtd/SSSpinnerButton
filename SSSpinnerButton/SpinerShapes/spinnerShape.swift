@@ -112,6 +112,7 @@ enum SpinnerShape {
     case circle
     case line
     case stroke
+    case pacman
     
     /// Return CALayer of specific shape
     ///
@@ -124,6 +125,15 @@ enum SpinnerShape {
         var path: UIBezierPath = UIBezierPath()
         
         switch self {
+        case .pacman:
+            path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
+                        radius: size.width / 4,
+                        startAngle: 0,
+                        endAngle: CGFloat(2 * Double.pi),
+                        clockwise: true)
+            layer.fillColor = nil
+            layer.strokeColor = color.cgColor
+            layer.lineWidth = size.width / 2
         case .circle:
             path.addArc(withCenter: CGPoint(x: size.width / 2, y: size.height / 2),
                         radius: (size.width / 2),

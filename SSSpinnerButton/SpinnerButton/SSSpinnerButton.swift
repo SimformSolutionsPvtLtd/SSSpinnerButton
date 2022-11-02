@@ -141,6 +141,11 @@ open class SSSpinnerButton: UIButton {
         setUp()
     }
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUp()
+    }
+
     /// init method
     ///
     /// - Parameter title: button title for normal state
