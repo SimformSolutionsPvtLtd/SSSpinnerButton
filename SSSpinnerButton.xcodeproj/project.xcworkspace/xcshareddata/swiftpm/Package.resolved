@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ssspinnerbutton",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SimformSolutionsPvtLtd/SSSpinnerButton.git",
+      "state" : {
+        "branch" : "feature/SPM-Support",
+        "revision" : "0bba31db602090e6a647ee2aceada1753ed68352"
+      }
+    }
+  ],
+  "version" : 2
+}
