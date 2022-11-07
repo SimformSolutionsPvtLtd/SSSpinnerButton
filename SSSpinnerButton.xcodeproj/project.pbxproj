@@ -7,32 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07FAD28B22A0668800FC1F9E /* SSSpinnerButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 07FAD28922A0668800FC1F9E /* SSSpinnerButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07FAD28E22A0668800FC1F9E /* SSSpinnerButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FAD28722A0668800FC1F9E /* SSSpinnerButton.framework */; };
 		07FAD28F22A0668800FC1F9E /* SSSpinnerButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07FAD28722A0668800FC1F9E /* SSSpinnerButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		07FAD29522A0677A00FC1F9E /* SpinnerAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */; };
-		07FAD29622A0677D00FC1F9E /* spinnerLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */; };
-		07FAD29722A0678300FC1F9E /* spinnerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */; };
-		07FAD29822A0678800FC1F9E /* SSFailMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519BCB67219A946600F50E26 /* SSFailMark.swift */; };
-		07FAD29922A0678A00FC1F9E /* SSBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */; };
-		07FAD29A22A0678E00FC1F9E /* SSBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */; };
-		07FAD29B22A0679200FC1F9E /* SSCircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */; };
-		07FAD29C22A0679500FC1F9E /* SSLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */; };
-		07FAD29D22A0679800FC1F9E /* SSSpinnerBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */; };
-		07FAD29E22A0679B00FC1F9E /* SSSuccessMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730FA84E2136AD4800F6116F /* SSSuccessMark.swift */; };
-		07FAD29F22A0679E00FC1F9E /* SSErrorMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737852F82137B12B005A1EA6 /* SSErrorMark.swift */; };
-		07FAD2A022A067A300FC1F9E /* SpinnerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */; };
-		07FAD2A122A067A600FC1F9E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737852FA2137C745005A1EA6 /* Extensions.swift */; };
-		07FAD2A222A067AC00FC1F9E /* SSSpinnerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */; };
 		07FAD2AD22A06F7E00FC1F9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAD2A522A06F7E00FC1F9E /* ViewController.swift */; };
 		07FAD2AE22A06F7E00FC1F9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD2A622A06F7E00FC1F9E /* Assets.xcassets */; };
 		07FAD2AF22A06F7E00FC1F9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD2A722A06F7E00FC1F9E /* LaunchScreen.storyboard */; };
 		07FAD2B022A06F7E00FC1F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD2A922A06F7E00FC1F9E /* Main.storyboard */; };
 		07FAD2B122A06F7E00FC1F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAD2AB22A06F7E00FC1F9E /* AppDelegate.swift */; };
 		51AAA60420C65EA5000F4BCD /* .tailor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA60320C65EA5000F4BCD /* .tailor.yml */; };
-		D346F19628242F900085293D /* SSPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19528242F900085293D /* SSPacman.swift */; };
-		D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */; };
-		D3D692F22629BDFD0032EB92 /* SSCircleWaveSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,33 +43,14 @@
 
 /* Begin PBXFileReference section */
 		07FAD28722A0668800FC1F9E /* SSSpinnerButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSSpinnerButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		07FAD28922A0668800FC1F9E /* SSSpinnerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSSpinnerButton.h; sourceTree = "<group>"; };
-		07FAD28A22A0668800FC1F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07FAD2A522A06F7E00FC1F9E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07FAD2A622A06F7E00FC1F9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07FAD2A822A06F7E00FC1F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07FAD2AA22A06F7E00FC1F9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07FAD2AB22A06F7E00FC1F9E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07FAD2AC22A06F7E00FC1F9E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		519BCB67219A946600F50E26 /* SSFailMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSFailMark.swift; sourceTree = "<group>"; };
 		51AAA5D520C64ED3000F4BCD /* SSSpinnerButton Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSSpinnerButton Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerAnimationDelegate.swift; sourceTree = "<group>"; };
-		51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spinnerLayers.swift; sourceTree = "<group>"; };
-		51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = spinnerShape.swift; sourceTree = "<group>"; };
-		51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBallRotateChase.swift; sourceTree = "<group>"; };
-		51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSBallSpinFadeLoader.swift; sourceTree = "<group>"; };
-		51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCircleStrokeSpin.swift; sourceTree = "<group>"; };
-		51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLineSpinFadeLoader.swift; sourceTree = "<group>"; };
-		51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSSpinnerBallClipRotate.swift; sourceTree = "<group>"; };
-		51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerTypes.swift; sourceTree = "<group>"; };
-		51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSSpinnerButton.swift; sourceTree = "<group>"; };
 		51AAA60320C65EA5000F4BCD /* .tailor.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .tailor.yml; sourceTree = "<group>"; };
-		730FA84E2136AD4800F6116F /* SSSuccessMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSuccessMark.swift; sourceTree = "<group>"; };
-		737852F82137B12B005A1EA6 /* SSErrorMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSErrorMark.swift; sourceTree = "<group>"; };
-		737852FA2137C745005A1EA6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D346F19528242F900085293D /* SSPacman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSPacman.swift; sourceTree = "<group>"; };
-		D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SSCircleScaleMultiple.swift; path = ../../../../../../Desktop/SSSpinnerButton/SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSCircleScaleMultiple.swift; sourceTree = "<group>"; };
-		D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCircleWaveSpin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,17 +72,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07FAD28822A0668800FC1F9E /* SSSpinnerButton */ = {
-			isa = PBXGroup;
-			children = (
-				51AAA5EB20C64EF0000F4BCD /* SpinerShapes */,
-				51AAA5F720C64EF0000F4BCD /* SpinnerButton */,
-				07FAD28922A0668800FC1F9E /* SSSpinnerButton.h */,
-				07FAD28A22A0668800FC1F9E /* Info.plist */,
-			);
-			path = SSSpinnerButton;
-			sourceTree = "<group>";
-		};
 		07FAD2A422A06F7E00FC1F9E /* SSSpinnerButton Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +90,6 @@
 			children = (
 				51AAA60320C65EA5000F4BCD /* .tailor.yml */,
 				07FAD2A422A06F7E00FC1F9E /* SSSpinnerButton Demo */,
-				07FAD28822A0668800FC1F9E /* SSSpinnerButton */,
 				51AAA5D620C64ED3000F4BCD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,53 +103,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		51AAA5EB20C64EF0000F4BCD /* SpinerShapes */ = {
-			isa = PBXGroup;
-			children = (
-				51AAA5EC20C64EF0000F4BCD /* SpinnerAnimationDelegate */,
-				51AAA5EE20C64EF0000F4BCD /* spinnerLayers.swift */,
-				51AAA5EF20C64EF0000F4BCD /* spinnerShape.swift */,
-				51AAA5F020C64EF0000F4BCD /* SpinnerShapeWithAnimation */,
-				51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */,
-				737852FA2137C745005A1EA6 /* Extensions.swift */,
-			);
-			path = SpinerShapes;
-			sourceTree = "<group>";
-		};
-		51AAA5EC20C64EF0000F4BCD /* SpinnerAnimationDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				51AAA5ED20C64EF0000F4BCD /* SpinnerAnimationDelegate.swift */,
-			);
-			path = SpinnerAnimationDelegate;
-			sourceTree = "<group>";
-		};
-		51AAA5F020C64EF0000F4BCD /* SpinnerShapeWithAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				519BCB67219A946600F50E26 /* SSFailMark.swift */,
-				51AAA5F120C64EF0000F4BCD /* SSBallRotateChase.swift */,
-				51AAA5F220C64EF0000F4BCD /* SSBallSpinFadeLoader.swift */,
-				D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */,
-				51AAA5F320C64EF0000F4BCD /* SSCircleStrokeSpin.swift */,
-				51AAA5F420C64EF0000F4BCD /* SSLineSpinFadeLoader.swift */,
-				51AAA5F520C64EF0000F4BCD /* SSSpinnerBallClipRotate.swift */,
-				730FA84E2136AD4800F6116F /* SSSuccessMark.swift */,
-				737852F82137B12B005A1EA6 /* SSErrorMark.swift */,
-				D346F19528242F900085293D /* SSPacman.swift */,
-				D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */,
-			);
-			path = SpinnerShapeWithAnimation;
-			sourceTree = "<group>";
-		};
-		51AAA5F720C64EF0000F4BCD /* SpinnerButton */ = {
-			isa = PBXGroup;
-			children = (
-				51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */,
-			);
-			path = SpinnerButton;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -206,7 +110,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07FAD28B22A0668800FC1F9E /* SSSpinnerButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +150,8 @@
 				07FAD28D22A0668800FC1F9E /* PBXTargetDependency */,
 			);
 			name = "SSSpinnerButton Demo";
+			packageProductDependencies = (
+			);
 			productName = SSSpinnerButtons;
 			productReference = 51AAA5D520C64ED3000F4BCD /* SSSpinnerButton Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +186,8 @@
 				Base,
 			);
 			mainGroup = 51AAA5CC20C64ED3000F4BCD;
+			packageReferences = (
+			);
 			productRefGroup = 51AAA5D620C64ED3000F4BCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,23 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */,
-				07FAD29E22A0679B00FC1F9E /* SSSuccessMark.swift in Sources */,
-				07FAD2A022A067A300FC1F9E /* SpinnerTypes.swift in Sources */,
-				07FAD29822A0678800FC1F9E /* SSFailMark.swift in Sources */,
-				07FAD2A222A067AC00FC1F9E /* SSSpinnerButton.swift in Sources */,
-				07FAD29A22A0678E00FC1F9E /* SSBallSpinFadeLoader.swift in Sources */,
-				07FAD29B22A0679200FC1F9E /* SSCircleStrokeSpin.swift in Sources */,
-				07FAD29722A0678300FC1F9E /* spinnerShape.swift in Sources */,
-				D3D692F22629BDFD0032EB92 /* SSCircleWaveSpin.swift in Sources */,
-				07FAD29D22A0679800FC1F9E /* SSSpinnerBallClipRotate.swift in Sources */,
-				D346F19628242F900085293D /* SSPacman.swift in Sources */,
-				07FAD29C22A0679500FC1F9E /* SSLineSpinFadeLoader.swift in Sources */,
-				07FAD2A122A067A600FC1F9E /* Extensions.swift in Sources */,
-				07FAD29922A0678A00FC1F9E /* SSBallRotateChase.swift in Sources */,
-				07FAD29522A0677A00FC1F9E /* SpinnerAnimationDelegate.swift in Sources */,
-				07FAD29F22A0679E00FC1F9E /* SSErrorMark.swift in Sources */,
-				07FAD29622A0677D00FC1F9E /* spinnerLayers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,13 +481,12 @@
 		51AAA5E820C64ED3000F4BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -610,13 +499,12 @@
 		51AAA5E920C64ED3000F4BCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -689,13 +577,12 @@
 		51AAA60620C6600C000F4BCD /* Analyze */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SSSpinnerButton/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simform.SSSpinnerButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
