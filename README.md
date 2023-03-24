@@ -12,10 +12,11 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SSSpinnerButton.gif?raw=true)
 
 # Features!
-  - Rounded button when spinner active
+  - Rounded button when spz̄inner active
   - Various spinner animations
   - Dynamic spinner size
   - Spinner with completion types (Success, fail, error)
+  - Spinner with Ripple Effect
   - CocoaPods
 
 # Requirements
@@ -71,6 +72,12 @@ Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
         button.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
             // Your code here
         })
+    **To give Default RippleEffect just set this "Set Ripple Effect" value to On**
+     ![Alt text](SpinnerButtonRippleEffect.png)
+     
+     **To Change the RippleEffect**
+    
+        button.setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double, rippleEffectColor: UIColor, rippleEffectPercent: Double, initalRippleEffectPercent: Double)
 
 # Migration
 **Version 3.0.1**

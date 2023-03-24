@@ -23,6 +23,12 @@ open class SSSpinnerButton: UIButton {
     internal var storedDisableTitle: String?
     internal var storedHighlitedTitle: String?
     
+    internal var rippleEffectAnimationDuration = 0.0
+    internal var initialOpacity = 0.0
+    internal var rippleEffectColor = UIColor.white
+    internal var rippleEffectPercent = CGFloat(0.0)
+    internal var initalRippleEffectPercent: CGFloat = CGFloat(0.0)
+    
     internal var storedAttributedNormalTitle: NSAttributedString?
     internal var storedAttributedSelectedTitle: NSAttributedString?
     internal var storedAttributedDisableTitle: NSAttributedString?
@@ -50,6 +56,14 @@ open class SSSpinnerButton: UIButton {
     @IBInspectable var cornrRadius: CGFloat = 0 {
         willSet {
             layer.cornerRadius = newValue
+        }
+    }
+    
+    @IBInspectable var setRippleEffect: Bool = false {
+        didSet {
+            if setRippleEffect {
+                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: .white, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
+            }
         }
     }
     
@@ -159,6 +173,63 @@ open class SSSpinnerButton: UIButton {
         super.layoutSubviews()
     }
     
+}
+
+public extension SSSpinnerButton {
+    
+    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initalRippleEffectPercent: CGFloat) {
+        self.rippleEffectAnimationDuration = rippleEffectAnimationDuration
+        self.initialOpacity = initialOpacity
+        self.rippleEffectColor = rippleEffectColor
+        self.rippleEffectPercent = rippleEffectPercent
+        self.initalRippleEffectPercent = initalRippleEffectPercent
+    }
+}
+
+public extension SSSpinnerButton{
+    
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        var shapeLayer = CAShapeLayer()
+        if shapeLayer.superlayer != nil {
+            shapeLayer.removeFromSuperlayer()
+        }
+        shapeLayer = CAShapeLayer()
+        // let center = CGPoint(x: bounds.width/CGFloat(Constants.TWO), y: bounds.height/CGFloat(Constants.TWO))
+        let diagnolLength = sqrt(bounds.width*bounds.width + bounds.height*bounds.height)
+        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initalRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
+        shapeLayer.path = path.cgPath
+        shapeLayer.opacity = Float(initialOpacity)
+        shapeLayer.fillColor = rippleEffectColor.cgColor
+        shapeLayer.strokeColor = rippleEffectColor.cgColor
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
+        shapeLayer.frame = bounds
+        layer.addSublayer(shapeLayer)
+        let circleEnlargeAnimation = CABasicAnimation(keyPath: "transform.scale")
+        circleEnlargeAnimation.fromValue = 1
+        circleEnlargeAnimation.toValue = rippleEffectPercent/initalRippleEffectPercent
+        circleEnlargeAnimation.duration = Double(rippleEffectAnimationDuration) * 0.7
+        circleEnlargeAnimation.fillMode = CAMediaTimingFillMode.forwards
+        circleEnlargeAnimation.isRemovedOnCompletion = false
+        circleEnlargeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        let fadingOutAnimation = CABasicAnimation(keyPath: "opacity")
+        fadingOutAnimation.fromValue = initialOpacity
+        fadingOutAnimation.toValue = 0
+        fadingOutAnimation.duration = Double(rippleEffectAnimationDuration) * 0.8
+        fadingOutAnimation.beginTime = Double(rippleEffectAnimationDuration) * 0.2
+        fadingOutAnimation.fillMode = CAMediaTimingFillMode.forwards
+        fadingOutAnimation.isRemovedOnCompletion = false
+        fadingOutAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        let group = CAAnimationGroup()
+        group.animations = [circleEnlargeAnimation, fadingOutAnimation]
+        group.duration = CFTimeInterval(rippleEffectAnimationDuration)
+        group.fillMode = CAMediaTimingFillMode.forwards
+        group.isRemovedOnCompletion = false
+        CATransaction.begin()
+        shapeLayer.add(group, forKey: nil)
+        CATransaction.commit()
+        return super.beginTracking(touch, with: event)
+    }
 }
 
 private extension SSSpinnerButton {

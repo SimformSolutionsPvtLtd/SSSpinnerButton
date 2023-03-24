@@ -30,8 +30,8 @@
 		07FAD2B022A06F7E00FC1F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FAD2A922A06F7E00FC1F9E /* Main.storyboard */; };
 		07FAD2B122A06F7E00FC1F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAD2AB22A06F7E00FC1F9E /* AppDelegate.swift */; };
 		51AAA60420C65EA5000F4BCD /* .tailor.yml in Resources */ = {isa = PBXBuildFile; fileRef = 51AAA60320C65EA5000F4BCD /* .tailor.yml */; };
+		69530F5F29B6FA5900E61DE1 /* SSCircleScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69530F5E29B6FA5900E61DE1 /* SSCircleScaleMultiple.swift */; };
 		D346F19628242F900085293D /* SSPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19528242F900085293D /* SSPacman.swift */; };
-		D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346F19728242FD60085293D /* SSCircleScaleMultiple.swift */; };
 		D3D692F22629BDFD0032EB92 /* SSCircleWaveSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D692F12629BDFD0032EB92 /* SSCircleWaveSpin.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +82,7 @@
 		51AAA5F620C64EF0000F4BCD /* SpinnerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerTypes.swift; sourceTree = "<group>"; };
 		51AAA5F820C64EF0000F4BCD /* SSSpinnerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSSpinnerButton.swift; sourceTree = "<group>"; };
 		51AAA60320C65EA5000F4BCD /* .tailor.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .tailor.yml; sourceTree = "<group>"; };
+		69530F5E29B6FA5900E61DE1 /* SSCircleScaleMultiple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSCircleScaleMultiple.swift; path = SSSpinnerButton/SpinerShapes/SpinnerShapeWithAnimation/SSCircleScaleMultiple.swift; sourceTree = "<group>"; };
 		730FA84E2136AD4800F6116F /* SSSuccessMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSuccessMark.swift; sourceTree = "<group>"; };
 		737852F82137B12B005A1EA6 /* SSErrorMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSErrorMark.swift; sourceTree = "<group>"; };
 		737852FA2137C745005A1EA6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		51AAA5CC20C64ED3000F4BCD = {
 			isa = PBXGroup;
 			children = (
+				69530F5E29B6FA5900E61DE1 /* SSCircleScaleMultiple.swift */,
 				51AAA60320C65EA5000F4BCD /* .tailor.yml */,
 				07FAD2A422A06F7E00FC1F9E /* SSSpinnerButton Demo */,
 				07FAD28822A0668800FC1F9E /* SSSpinnerButton */,
@@ -334,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D346F19828242FD60085293D /* SSCircleScaleMultiple.swift in Sources */,
+				69530F5F29B6FA5900E61DE1 /* SSCircleScaleMultiple.swift in Sources */,
 				07FAD29E22A0679B00FC1F9E /* SSSuccessMark.swift in Sources */,
 				07FAD2A022A067A300FC1F9E /* SpinnerTypes.swift in Sources */,
 				07FAD29822A0678800FC1F9E /* SSFailMark.swift in Sources */,
