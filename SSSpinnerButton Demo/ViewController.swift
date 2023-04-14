@@ -17,10 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnLineSpinFade: SSSpinnerButton!
     @IBOutlet weak var btnBallRotateChase: SSSpinnerButton!
     @IBOutlet weak var btnCircleStrokeSpin: SSSpinnerButton!
+    @IBOutlet weak var btnRippleEffect: SSSpinnerButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        btnRippleEffect.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: .black, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
-        sender.isSelected = !sender.isSelected
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .pacman, .circleScaleMultiple, .circleWaveSpin]
         
         // MARK: Start Animating
