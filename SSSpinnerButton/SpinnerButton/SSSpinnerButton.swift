@@ -23,6 +23,12 @@ open class SSSpinnerButton: UIButton {
     internal var storedDisableTitle: String?
     internal var storedHighlitedTitle: String?
     
+    public var rippleEffectAnimationDuration = 0.0
+    public var initialOpacity = 0.0
+    public var rippleEffectColor = UIColor.white
+    public var rippleEffectPercent = CGFloat(0.0)
+    public var initalRippleEffectPercent: CGFloat = CGFloat(0.0)
+    
     internal var storedAttributedNormalTitle: NSAttributedString?
     internal var storedAttributedSelectedTitle: NSAttributedString?
     internal var storedAttributedDisableTitle: NSAttributedString?
@@ -37,11 +43,12 @@ open class SSSpinnerButton: UIButton {
     internal var storedDisabledImage: UIImage?
     internal var storedHighlightedImage: UIImage?
     internal var storedBackgroundColor: UIColor?
+    
     fileprivate var animationDuration: CFTimeInterval = 0.1
     
     fileprivate var isAnimating: Bool = false
     
-    fileprivate var spinnerType: SpinnerType = .ballClipRotate
+    fileprivate var spinnerType: SpinnerType = Config.spinnerType
     
     fileprivate var storedWidth: CGFloat?
     fileprivate var storedHeight: CGFloat?
@@ -52,12 +59,21 @@ open class SSSpinnerButton: UIButton {
             layer.cornerRadius = newValue
         }
     }
+    @IBInspectable var setRippleEffect: Bool = false {
+        didSet {
+            if setRippleEffect {
+                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: rippleEffectColor, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
+            }
+        }
+    }
     
     /// Sets the spinner color
-    public var spinnerColor: UIColor = UIColor.gray
+    public var spinnerColor: UIColor = Config.spinnerColor
     
-    var spinnerSize: UInt?
+    var spinnerSize: UInt? = Config.spinnerSize
     /// Sets the button title for its normal state
+    
+    
     
     public var normalTitle: String? {
         get {
@@ -161,6 +177,63 @@ open class SSSpinnerButton: UIButton {
     
 }
 
+public extension SSSpinnerButton {
+    
+    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initalRippleEffectPercent: CGFloat) {
+        self.rippleEffectAnimationDuration = rippleEffectAnimationDuration
+        self.initialOpacity = initialOpacity
+        self.rippleEffectColor = rippleEffectColor
+        self.rippleEffectPercent = rippleEffectPercent
+        self.initalRippleEffectPercent = initalRippleEffectPercent
+    }
+}
+
+public extension SSSpinnerButton{
+    
+    override open func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        
+        var shapeLayer = CAShapeLayer()
+        if shapeLayer.superlayer != nil {
+            shapeLayer.removeFromSuperlayer()
+        }
+        shapeLayer = CAShapeLayer()
+        // let center = CGPoint(x: bounds.width/CGFloat(Constants.TWO), y: bounds.height/CGFloat(Constants.TWO))
+        let diagnolLength = sqrt(bounds.width*bounds.width + bounds.height*bounds.height)
+        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initalRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
+        shapeLayer.path = path.cgPath
+        shapeLayer.opacity = Float(initialOpacity)
+        shapeLayer.fillColor = rippleEffectColor.cgColor
+        shapeLayer.strokeColor = rippleEffectColor.cgColor
+        shapeLayer.lineCap = CAShapeLayerLineCap.round
+        shapeLayer.frame = bounds
+        layer.addSublayer(shapeLayer)
+        let circleEnlargeAnimation = CABasicAnimation(keyPath: "transform.scale")
+        circleEnlargeAnimation.fromValue = 1
+        circleEnlargeAnimation.toValue = rippleEffectPercent/initalRippleEffectPercent
+        circleEnlargeAnimation.duration = Double(rippleEffectAnimationDuration) * 0.7
+        circleEnlargeAnimation.fillMode = CAMediaTimingFillMode.forwards
+        circleEnlargeAnimation.isRemovedOnCompletion = false
+        circleEnlargeAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        let fadingOutAnimation = CABasicAnimation(keyPath: "opacity")
+        fadingOutAnimation.fromValue = initialOpacity
+        fadingOutAnimation.toValue = 0
+        fadingOutAnimation.duration = Double(rippleEffectAnimationDuration) * 0.8
+        fadingOutAnimation.beginTime = Double(rippleEffectAnimationDuration) * 0.2
+        fadingOutAnimation.fillMode = CAMediaTimingFillMode.forwards
+        fadingOutAnimation.isRemovedOnCompletion = false
+        fadingOutAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
+        let group = CAAnimationGroup()
+        group.animations = [circleEnlargeAnimation, fadingOutAnimation]
+        group.duration = CFTimeInterval(rippleEffectAnimationDuration)
+        group.fillMode = CAMediaTimingFillMode.forwards
+        group.isRemovedOnCompletion = false
+        CATransaction.begin()
+        shapeLayer.add(group, forKey: nil)
+        CATransaction.commit()
+        return super.beginTracking(touch, with: event)
+    }
+}
+
 private extension SSSpinnerButton {
     
     /// Default setup of Button UI and Lable
@@ -200,8 +273,8 @@ public extension SSSpinnerButton {
     ///   - spinnerType: spinner Type ( ballClipRotate(default), ballSpinFade, lineSpinFade, circleStrokeSpin, ballRotateChase)
     ///   - spinnercolor: color of spinner (default = gray)
     ///   - complete: complation block (call after animation start)
-    func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, complete: (() -> Void)?) {
-        self.startAnimate(spinnerType: spinnerType, spinnercolor: spinnercolor, spinnerSize: nil, complete: complete)
+    func startAnimate(spinnerType: SpinnerType = Config.spinnerType, spinnercolor: UIColor = Config.spinnerColor, complete: (() -> Void)?) {
+        self.startAnimate(spinnerType: spinnerType , spinnercolor: spinnercolor, spinnerSize: nil, complete: complete)
     }
     
     /// Start Animation
@@ -211,7 +284,7 @@ public extension SSSpinnerButton {
     ///   - spinnercolor: color of spinner (default = gray)
     ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
-    func startAnimate(spinnerType: SpinnerType = .ballClipRotate, spinnercolor: UIColor = .gray, spinnerSize: UInt?, complete: (() -> Void)?) {
+    func startAnimate(spinnerType: SpinnerType = Config.spinnerType, spinnercolor: UIColor = Config.spinnerColor, spinnerSize: UInt? = nil, complete: (() -> Void)?) {
         if self.cornrRadius == 0 {
             self.cornrRadius = self.layer.cornerRadius
         }
@@ -220,7 +293,7 @@ public extension SSSpinnerButton {
         isAnimating = true
         self.spinnerColor = spinnercolor
         self.spinnerType = spinnerType
-        self.spinnerSize = spinnerSize
+        self.spinnerSize = spinnerSize ?? Config.spinnerSize
         
         self.layer.cornerRadius = self.frame.height / 2
         if layer.sublayers != nil {
@@ -465,4 +538,14 @@ private extension SSSpinnerButton {
         animation.setupSpinnerAnimation(layer: self.layer, frame: self.bounds, color: self.spinnerColor, spinnerSize: self.spinnerSize)
     }
     
+}
+
+
+extension SSSpinnerButton {
+    
+    public struct Config {
+        public static var spinnerType: SpinnerType = .ballClipRotate
+        public static var spinnerColor: UIColor = .gray
+        public static var spinnerSize: UInt? = nil
+    }
 }

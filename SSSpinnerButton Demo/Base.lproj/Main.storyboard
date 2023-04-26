@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tkn-gX-CQf">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tkn-gX-CQf">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,17 +17,17 @@
                         <viewControllerLayoutGuide type="bottom" id="2ZM-5j-P4U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-Uz-zDo">
-                                <rect key="frame" x="20" y="108" width="374" height="788"/>
+                                <rect key="frame" x="20" y="123" width="353" height="729"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-yT-Y03">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="788"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="729"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW4-Lx-QHw" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" red="0.97647058823529409" green="0.58039215686274503" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wGP-Vh-Znc"/>
@@ -45,7 +45,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-V5-Ctm" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="70" width="182" height="80"/>
+                                                <rect key="frame" x="0.0" y="70" width="171.66666666666666" height="80"/>
                                                 <color key="backgroundColor" red="0.37647058823529411" green="0.90196078431372551" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="oAt-2j-W9M"/>
@@ -58,7 +58,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-0X-zpK" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="180" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="180" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" red="0.62352941176470589" green="0.72941176470588232" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Bff-R0-oeL"/>
@@ -71,7 +71,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znd-UY-1Sd" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="250" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="250" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" red="0.84313725490196079" green="0.61176470588235299" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Efm-If-Dtj"/>
@@ -83,8 +83,19 @@
                                                     <action selector="onSpinnnerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsZ-lv-Kv3"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wu-cC-g3e" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
+                                                <rect key="frame" x="0.0" y="320" width="171.66666666666666" height="34.333333333333314"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ripple Effect">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="setRippleEffect" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgq-n3-sJy" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="320" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="384.33333333333331" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.7843137255" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="S1c-3q-T1m"/>
@@ -97,7 +108,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-cO-clF" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="390" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="454.33333333333337" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="jDW-j4-0fJ"/>
@@ -110,16 +121,16 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z33-qE-Bpm">
-                                                <rect key="frame" x="0.0" y="460" width="182" height="328"/>
+                                                <rect key="frame" x="0.0" y="524.33333333333337" width="171.66666666666666" height="204.66666666666663"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-We-M4l">
-                                        <rect key="frame" x="192" y="0.0" width="182" height="788"/>
+                                        <rect key="frame" x="181.66666666666663" y="0.0" width="171.33333333333337" height="729"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-OB-5yI" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171.33333333333334" height="40"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.58039215690000001" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="5pq-xw-igd"/>
@@ -132,7 +143,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6J-Qu-XOe" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="70" width="182" height="80"/>
+                                                <rect key="frame" x="0.0" y="70" width="171.33333333333334" height="80"/>
                                                 <color key="backgroundColor" red="0.37647058820000001" green="0.90196078430000004" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="Tur-yv-P8E"/>
@@ -145,7 +156,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJJ-TA-pFn" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="180" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="180" width="171.33333333333334" height="40"/>
                                                 <color key="backgroundColor" red="0.62352941179999999" green="0.72941176470000002" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="lHr-P2-mfX"/>
@@ -158,7 +169,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROJ-5s-xGv" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="250" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="250" width="171.33333333333334" height="40"/>
                                                 <color key="backgroundColor" red="0.84313725490000002" green="0.61176470589999998" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tBL-HF-dg2"/>
@@ -171,7 +182,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRc-D7-CNH" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="320" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="320" width="171.33333333333334" height="40"/>
                                                 <color key="backgroundColor" red="1" green="0.7843137255" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tVe-LI-2b0"/>
@@ -184,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTM-Lo-EQJ" customClass="SSSpinnerButton" customModule="SSSpinnerButton">
-                                                <rect key="frame" x="0.0" y="390" width="182" height="40"/>
+                                                <rect key="frame" x="0.0" y="390" width="171.33333333333334" height="40"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="qNX-ra-Syf"/>
@@ -197,7 +208,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Wl-wG-voG">
-                                                <rect key="frame" x="0.0" y="460" width="182" height="328"/>
+                                                <rect key="frame" x="0.0" y="460" width="171.33333333333334" height="269"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
@@ -219,6 +230,7 @@
                         <outlet property="btnCircleStrokeSpin" destination="Cbe-cO-clF" id="vjh-lV-SHF"/>
                         <outlet property="btnClipRotate" destination="UW4-Lx-QHw" id="Azq-tL-y3J"/>
                         <outlet property="btnLineSpinFade" destination="1bF-0X-zpK" id="FuU-oA-7We"/>
+                        <outlet property="btnRippleEffect" destination="7Wu-cC-g3e" id="4UU-r1-8nQ"/>
                         <outlet property="btnSpinFade" destination="oEx-V5-Ctm" id="7Ij-GT-WpG"/>
                     </connections>
                 </viewController>
@@ -235,7 +247,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hMo-eG-eFa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Olu-jz-NGk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -250,7 +262,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Tkn-gX-CQf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jMU-wc-WKP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -269,6 +281,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

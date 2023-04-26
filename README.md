@@ -1,7 +1,7 @@
 # SSSpinnerButton
 
 
-SSSpinnerButton is an elegant button with a different spinner animations.
+SSSpinnerButton is a versatile library for iOS developers, written in Swift, that allows you to easily create and customize spinner buttons. With this library, you can add loading spinners to your buttons, providing visual feedback to your users while they wait for a process to complete. The library offers a wide range of customizable options, including spinner color, size as well as button text, font, and background color. SSSpinnerButton is simple to integrate into your existing projects and offers excellent performance, making it an essential tool for any iOS developer looking to enhance their user interface.
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
@@ -12,10 +12,11 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 ![Alt text](https://github.com/simformsolutions/SSSpinnerButton/blob/master/SSSpinnerButton.gif?raw=true)
 
 # Features!
-  - Rounded button when spinner active
+  - Rounded button when spz̄inner active
   - Various spinner animations
   - Dynamic spinner size
   - Spinner with completion types (Success, fail, error)
+  - Spinner with Ripple Effect
   - CocoaPods
 
 # Requirements
@@ -36,7 +37,11 @@ SSSpinnerButton is an elegant button with a different spinner animations.
 
 **Carthage**
 
-Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
+- Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
+
+**Swift Package Manager**
+
+- When using Xcode 11 or later, you can install `SSSpinnerButton` through [Swift Package Manager](https://swift.org/package-manager/) by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
 
 **Manually**
 -   Download and drop **SSSpinnerButton** folder in your project.
@@ -71,6 +76,12 @@ Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
         button.stopAnimationWithCompletionTypeAndBackToDefaults(completionType: .fail, backToDefaults: true, complete: {
             // Your code here
         })
+    **To give Default RippleEffect just set this "Set Ripple Effect" value to On**
+     ![Alt text](SpinnerButtonRippleEffect.png)
+     
+     **To Change the RippleEffect**
+    
+        button.setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double, rippleEffectColor: UIColor, rippleEffectPercent: Double, initalRippleEffectPercent: Double)
 
 # Migration
 **Version 3.0.1**
@@ -78,15 +89,24 @@ Add `github simformsolutions/SSSpinnerButton` to your project's Cartfile
 
 **Version 2.0.1**
 - This version requires Xcode 10.1 and Swift 4.2.
-#  Contribute
--   We would love you for the contribution to SSspinnerButton, check the LICENSE file for more info.
- 
-#  Meta
--    Distributed under the MIT license. See LICENSE for more information.
 
+## 🤝 How to Contribute
 
-# Inspired 
--   Spinner animations inspired from [NVActivityIndicatorView](https://github.com/ninjaprox/NVActivityIndicatorView)
+Whether you're helping us fix bugs, improve the docs, or a feature request, we'd love to have you! :muscle:
+
+Check out our [**Contributing Guide**](CONTRIBUTING.md) for ideas on contributing.
+
+## Find this example useful? ❤️
+
+Give a ⭐️ if this project helped you!
+
+## Check out our other Libraries
+
+<h3><a href="https://github.com/SimformSolutionsPvtLtd/Awesome-Mobile-Libraries"><u>🗂 Simform Solutions Libraries→</u></a></h3>
+
+## MIT License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
     
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
