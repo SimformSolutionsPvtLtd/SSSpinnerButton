@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// 
-protocol SSSpinnerAnimationDelegate {
+protocol SSSpinnerAnimationDelegate: AnyObject {
     
     /// setup spinner layer
     ///
