@@ -27,7 +27,7 @@ open class SSSpinnerButton: UIButton {
     public var initialOpacity = 0.0
     public var rippleEffectColor = UIColor.white
     public var rippleEffectPercent = CGFloat(0.0)
-    public var initalRippleEffectPercent: CGFloat = CGFloat(0.0)
+    public var initialRippleEffectPercent: CGFloat = CGFloat(0.0)
     
     internal var storedAttributedNormalTitle: NSAttributedString?
     internal var storedAttributedSelectedTitle: NSAttributedString?
@@ -62,7 +62,7 @@ open class SSSpinnerButton: UIButton {
     @IBInspectable var setRippleEffect: Bool = false {
         didSet {
             if setRippleEffect {
-                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: rippleEffectColor, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
+                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: rippleEffectColor, rippleEffectPercent: 0.45, initialRippleEffectPercent: 0.3)
             }
         }
     }
@@ -179,12 +179,12 @@ open class SSSpinnerButton: UIButton {
 
 public extension SSSpinnerButton {
     
-    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initalRippleEffectPercent: CGFloat) {
+    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initialRippleEffectPercent: CGFloat) {
         self.rippleEffectAnimationDuration = rippleEffectAnimationDuration
         self.initialOpacity = initialOpacity
         self.rippleEffectColor = rippleEffectColor
         self.rippleEffectPercent = rippleEffectPercent
-        self.initalRippleEffectPercent = initalRippleEffectPercent
+        self.initialRippleEffectPercent = initialRippleEffectPercent
     }
 }
 
@@ -199,7 +199,7 @@ public extension SSSpinnerButton{
         shapeLayer = CAShapeLayer()
         // let center = CGPoint(x: bounds.width/CGFloat(Constants.TWO), y: bounds.height/CGFloat(Constants.TWO))
         let diagnolLength = sqrt(bounds.width*bounds.width + bounds.height*bounds.height)
-        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initalRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
+        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initialRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
         shapeLayer.path = path.cgPath
         shapeLayer.opacity = Float(initialOpacity)
         shapeLayer.fillColor = rippleEffectColor.cgColor
@@ -209,7 +209,7 @@ public extension SSSpinnerButton{
         layer.addSublayer(shapeLayer)
         let circleEnlargeAnimation = CABasicAnimation(keyPath: "transform.scale")
         circleEnlargeAnimation.fromValue = 1
-        circleEnlargeAnimation.toValue = rippleEffectPercent/initalRippleEffectPercent
+        circleEnlargeAnimation.toValue = rippleEffectPercent/initialRippleEffectPercent
         circleEnlargeAnimation.duration = Double(rippleEffectAnimationDuration) * 0.7
         circleEnlargeAnimation.fillMode = CAMediaTimingFillMode.forwards
         circleEnlargeAnimation.isRemovedOnCompletion = false
