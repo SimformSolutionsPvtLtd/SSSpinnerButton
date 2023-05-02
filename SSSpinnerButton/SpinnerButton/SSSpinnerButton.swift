@@ -54,7 +54,7 @@ open class SSSpinnerButton: UIButton {
     fileprivate var storedHeight: CGFloat?
     
     /// Sets the button corner radius
-    @IBInspectable var cornrRadius: CGFloat = 0 {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
         willSet {
             layer.cornerRadius = newValue
         }
@@ -240,18 +240,18 @@ private extension SSSpinnerButton {
     func setUp() {
         
         self.removeAnimationLayer()
-        if self.cornrRadius == 0 {
-            self.cornrRadius = self.layer.cornerRadius
+        if self.cornerRadius == 0 {
+            self.cornerRadius = self.layer.cornerRadius
         }
         if layer.sublayers != nil {
             
             for item in layer.sublayers! where item is CAGradientLayer {
                 
-                item.cornerRadius = self.cornrRadius
+                item.cornerRadius = self.cornerRadius
                 item.masksToBounds = true
             }
         }
-        self.layer.cornerRadius = self.cornrRadius
+        self.layer.cornerRadius = self.cornerRadius
         self.layer.masksToBounds = true
         
         if self.image(for: .normal) != nil && self.normalTitle != nil {
@@ -285,8 +285,8 @@ public extension SSSpinnerButton {
     ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
     func startAnimate(spinnerType: SpinnerType = Config.spinnerType, spinnercolor: UIColor = Config.spinnerColor, spinnerSize: UInt? = nil, complete: (() -> Void)?) {
-        if self.cornrRadius == 0 {
-            self.cornrRadius = self.layer.cornerRadius
+        if self.cornerRadius == 0 {
+            self.cornerRadius = self.layer.cornerRadius
         }
         
         self.removeAnimationLayer()
@@ -520,11 +520,11 @@ private extension SSSpinnerButton {
             
             for item in self.layer.sublayers! where item is CAGradientLayer {
                 item.add(animation, forKey: animation.keyPath)
-                item.cornerRadius = self.cornrRadius
+                item.cornerRadius = self.cornerRadius
             }
         }
         self.isAnimating = false
-        self.layer.cornerRadius = self.cornrRadius
+        self.layer.cornerRadius = self.cornerRadius
         if complete != nil {
             complete!()
             }
