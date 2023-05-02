@@ -404,19 +404,19 @@ private extension SSSpinnerButton {
         self.setImage(nil, for: .highlighted)
         isUserInteractionEnabled = false
         
-        let animaton = CABasicAnimation(keyPath: "bounds.size.width")
-        animaton.fromValue = bounds.width
-        animaton.toValue =  bounds.height
-        animaton.duration = animationDuration
-        animaton.fillMode = CAMediaTimingFillMode.both
-        animaton.isRemovedOnCompletion = false
+        let animation = CABasicAnimation(keyPath: "bounds.size.width")
+        animation.fromValue = bounds.width
+        animation.toValue =  bounds.height
+        animation.duration = animationDuration
+        animation.fillMode = CAMediaTimingFillMode.both
+        animation.isRemovedOnCompletion = false
         if layer.sublayers != nil {
             
             for item in layer.sublayers! where item is CAGradientLayer {
-                item.add(animaton, forKey: animaton.keyPath)
+                item.add(animation, forKey: animation.keyPath)
             }
         }
-        layer.add(animaton, forKey: animaton.keyPath)
+        layer.add(animation, forKey: animation.keyPath)
         self.perform(#selector(startSpinner), with: nil, afterDelay: animationDuration)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration, execute: {
