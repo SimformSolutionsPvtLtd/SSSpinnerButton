@@ -21,7 +21,7 @@ open class SSSpinnerButton: UIButton {
     internal var storedNormalTitle: String?
     internal var storedSelectedTitle: String?
     internal var storedDisableTitle: String?
-    internal var storedHighlitedTitle: String?
+    internal var storedHighlightedTitle: String?
     
     public var rippleEffectAnimationDuration = 0.0
     public var initialOpacity = 0.0
@@ -32,7 +32,7 @@ open class SSSpinnerButton: UIButton {
     internal var storedAttributedNormalTitle: NSAttributedString?
     internal var storedAttributedSelectedTitle: NSAttributedString?
     internal var storedAttributedDisableTitle: NSAttributedString?
-    internal var storedAttributedHighlitedTitle: NSAttributedString?
+    internal var storedAttributedHighlightedTitle: NSAttributedString?
     
     internal var storedBackgroundNormalImage: UIImage?
     internal var storedBackgroundSelectedImage: UIImage?
@@ -143,7 +143,7 @@ open class SSSpinnerButton: UIButton {
     }
     
     /// Sets the button attributed title for its normal state
-    public var attributedHighlitedTitle: NSAttributedString? {
+    public var attributedHighlightedTitle: NSAttributedString? {
         get {
             return self.attributedTitle(for: .highlighted)
         } set {
@@ -368,7 +368,7 @@ private extension SSSpinnerButton {
         storedDisableTitle = disabledTitle
         disabledTitle = nil
         
-        storedHighlitedTitle = highlightedTitle
+        storedHighlightedTitle = highlightedTitle
         highlightedTitle = nil
         
         storedAttributedNormalTitle = attributedNormalTitle
@@ -380,8 +380,8 @@ private extension SSSpinnerButton {
         storedAttributedDisableTitle = attributedDisableTitle
         attributedDisableTitle = nil
         
-        storedAttributedHighlitedTitle = attributedHighlitedTitle
-        attributedHighlitedTitle = nil
+        storedAttributedHighlightedTitle = attributedHighlightedTitle
+        attributedHighlightedTitle = nil
         
         
         storedBackgroundNormalImage = self.backgroundImage(for: .normal)
@@ -480,7 +480,7 @@ private extension SSSpinnerButton {
         self.setTitle(self.storedNormalTitle, for: .normal)
         self.setTitle(self.storedSelectedTitle, for: .selected)
         self.setTitle(self.storedDisableTitle, for: .disabled)
-        self.setTitle(self.storedHighlitedTitle, for: .highlighted)
+        self.setTitle(self.storedHighlightedTitle, for: .highlighted)
         
         if self.storedAttributedNormalTitle != nil {
             self.setAttributedTitle(self.storedAttributedNormalTitle, for: .normal)
@@ -494,8 +494,8 @@ private extension SSSpinnerButton {
             self.setAttributedTitle(self.storedAttributedDisableTitle, for: .disabled)
         }
        
-        if self.storedAttributedHighlitedTitle != nil {
-            self.setAttributedTitle(self.storedAttributedHighlitedTitle, for: .highlighted)
+        if self.storedAttributedHighlightedTitle != nil {
+            self.setAttributedTitle(self.storedAttributedHighlightedTitle, for: .highlighted)
         }
         
         self.setBackgroundImage(self.storedBackgroundNormalImage, for: .normal)
