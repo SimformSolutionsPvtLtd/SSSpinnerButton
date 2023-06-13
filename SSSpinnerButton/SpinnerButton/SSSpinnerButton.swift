@@ -21,18 +21,18 @@ open class SSSpinnerButton: UIButton {
     internal var storedNormalTitle: String?
     internal var storedSelectedTitle: String?
     internal var storedDisableTitle: String?
-    internal var storedHighlitedTitle: String?
+    internal var storedHighlightedTitle: String?
     
     public var rippleEffectAnimationDuration = 0.0
     public var initialOpacity = 0.0
     public var rippleEffectColor = UIColor.white
     public var rippleEffectPercent = CGFloat(0.0)
-    public var initalRippleEffectPercent: CGFloat = CGFloat(0.0)
+    public var initialRippleEffectPercent: CGFloat = CGFloat(0.0)
     
     internal var storedAttributedNormalTitle: NSAttributedString?
     internal var storedAttributedSelectedTitle: NSAttributedString?
     internal var storedAttributedDisableTitle: NSAttributedString?
-    internal var storedAttributedHighlitedTitle: NSAttributedString?
+    internal var storedAttributedHighlightedTitle: NSAttributedString?
     
     internal var storedBackgroundNormalImage: UIImage?
     internal var storedBackgroundSelectedImage: UIImage?
@@ -54,7 +54,7 @@ open class SSSpinnerButton: UIButton {
     fileprivate var storedHeight: CGFloat?
     
     /// Sets the button corner radius
-    @IBInspectable var cornrRadius: CGFloat = 0 {
+    @IBInspectable var cornerRadius: CGFloat = 0 {
         willSet {
             layer.cornerRadius = newValue
         }
@@ -62,7 +62,7 @@ open class SSSpinnerButton: UIButton {
     @IBInspectable var setRippleEffect: Bool = false {
         didSet {
             if setRippleEffect {
-                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: rippleEffectColor, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
+                self.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: rippleEffectColor, rippleEffectPercent: 0.45, initialRippleEffectPercent: 0.3)
             }
         }
     }
@@ -143,7 +143,7 @@ open class SSSpinnerButton: UIButton {
     }
     
     /// Sets the button attributed title for its normal state
-    public var attributedHighlitedTitle: NSAttributedString? {
+    public var attributedHighlightedTitle: NSAttributedString? {
         get {
             return self.attributedTitle(for: .highlighted)
         } set {
@@ -179,12 +179,12 @@ open class SSSpinnerButton: UIButton {
 
 public extension SSSpinnerButton {
     
-    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initalRippleEffectPercent: CGFloat) {
+    func setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double,rippleEffectColor: UIColor,rippleEffectPercent: CGFloat,initialRippleEffectPercent: CGFloat) {
         self.rippleEffectAnimationDuration = rippleEffectAnimationDuration
         self.initialOpacity = initialOpacity
         self.rippleEffectColor = rippleEffectColor
         self.rippleEffectPercent = rippleEffectPercent
-        self.initalRippleEffectPercent = initalRippleEffectPercent
+        self.initialRippleEffectPercent = initialRippleEffectPercent
     }
 }
 
@@ -199,7 +199,7 @@ public extension SSSpinnerButton{
         shapeLayer = CAShapeLayer()
         // let center = CGPoint(x: bounds.width/CGFloat(Constants.TWO), y: bounds.height/CGFloat(Constants.TWO))
         let diagnolLength = sqrt(bounds.width*bounds.width + bounds.height*bounds.height)
-        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initalRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
+        let path = UIBezierPath(arcCenter: touch.location(in: self), radius: 0.5*diagnolLength*initialRippleEffectPercent, startAngle: CGFloat(0), endAngle: (CGFloat(Double(360) * .pi) / CGFloat(180)), clockwise: true)
         shapeLayer.path = path.cgPath
         shapeLayer.opacity = Float(initialOpacity)
         shapeLayer.fillColor = rippleEffectColor.cgColor
@@ -209,7 +209,7 @@ public extension SSSpinnerButton{
         layer.addSublayer(shapeLayer)
         let circleEnlargeAnimation = CABasicAnimation(keyPath: "transform.scale")
         circleEnlargeAnimation.fromValue = 1
-        circleEnlargeAnimation.toValue = rippleEffectPercent/initalRippleEffectPercent
+        circleEnlargeAnimation.toValue = rippleEffectPercent/initialRippleEffectPercent
         circleEnlargeAnimation.duration = Double(rippleEffectAnimationDuration) * 0.7
         circleEnlargeAnimation.fillMode = CAMediaTimingFillMode.forwards
         circleEnlargeAnimation.isRemovedOnCompletion = false
@@ -240,18 +240,18 @@ private extension SSSpinnerButton {
     func setUp() {
         
         self.removeAnimationLayer()
-        if self.cornrRadius == 0 {
-            self.cornrRadius = self.layer.cornerRadius
+        if self.cornerRadius == 0 {
+            self.cornerRadius = self.layer.cornerRadius
         }
         if layer.sublayers != nil {
             
             for item in layer.sublayers! where item is CAGradientLayer {
                 
-                item.cornerRadius = self.cornrRadius
+                item.cornerRadius = self.cornerRadius
                 item.masksToBounds = true
             }
         }
-        self.layer.cornerRadius = self.cornrRadius
+        self.layer.cornerRadius = self.cornerRadius
         self.layer.masksToBounds = true
         
         if self.image(for: .normal) != nil && self.normalTitle != nil {
@@ -285,8 +285,8 @@ public extension SSSpinnerButton {
     ///   - spinnerSize: size of spinner layer
     ///   - complete: complation block (call after animation start)
     func startAnimate(spinnerType: SpinnerType = Config.spinnerType, spinnercolor: UIColor = Config.spinnerColor, spinnerSize: UInt? = nil, complete: (() -> Void)?) {
-        if self.cornrRadius == 0 {
-            self.cornrRadius = self.layer.cornerRadius
+        if self.cornerRadius == 0 {
+            self.cornerRadius = self.layer.cornerRadius
         }
         
         self.removeAnimationLayer()
@@ -368,7 +368,7 @@ private extension SSSpinnerButton {
         storedDisableTitle = disabledTitle
         disabledTitle = nil
         
-        storedHighlitedTitle = highlightedTitle
+        storedHighlightedTitle = highlightedTitle
         highlightedTitle = nil
         
         storedAttributedNormalTitle = attributedNormalTitle
@@ -380,8 +380,8 @@ private extension SSSpinnerButton {
         storedAttributedDisableTitle = attributedDisableTitle
         attributedDisableTitle = nil
         
-        storedAttributedHighlitedTitle = attributedHighlitedTitle
-        attributedHighlitedTitle = nil
+        storedAttributedHighlightedTitle = attributedHighlightedTitle
+        attributedHighlightedTitle = nil
         
         
         storedBackgroundNormalImage = self.backgroundImage(for: .normal)
@@ -404,19 +404,19 @@ private extension SSSpinnerButton {
         self.setImage(nil, for: .highlighted)
         isUserInteractionEnabled = false
         
-        let animaton = CABasicAnimation(keyPath: "bounds.size.width")
-        animaton.fromValue = bounds.width
-        animaton.toValue =  bounds.height
-        animaton.duration = animationDuration
-        animaton.fillMode = CAMediaTimingFillMode.both
-        animaton.isRemovedOnCompletion = false
+        let animation = CABasicAnimation(keyPath: "bounds.size.width")
+        animation.fromValue = bounds.width
+        animation.toValue =  bounds.height
+        animation.duration = animationDuration
+        animation.fillMode = CAMediaTimingFillMode.both
+        animation.isRemovedOnCompletion = false
         if layer.sublayers != nil {
             
             for item in layer.sublayers! where item is CAGradientLayer {
-                item.add(animaton, forKey: animaton.keyPath)
+                item.add(animation, forKey: animation.keyPath)
             }
         }
-        layer.add(animaton, forKey: animaton.keyPath)
+        layer.add(animation, forKey: animation.keyPath)
         self.perform(#selector(startSpinner), with: nil, afterDelay: animationDuration)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration, execute: {
@@ -480,7 +480,7 @@ private extension SSSpinnerButton {
         self.setTitle(self.storedNormalTitle, for: .normal)
         self.setTitle(self.storedSelectedTitle, for: .selected)
         self.setTitle(self.storedDisableTitle, for: .disabled)
-        self.setTitle(self.storedHighlitedTitle, for: .highlighted)
+        self.setTitle(self.storedHighlightedTitle, for: .highlighted)
         
         if self.storedAttributedNormalTitle != nil {
             self.setAttributedTitle(self.storedAttributedNormalTitle, for: .normal)
@@ -494,8 +494,8 @@ private extension SSSpinnerButton {
             self.setAttributedTitle(self.storedAttributedDisableTitle, for: .disabled)
         }
        
-        if self.storedAttributedHighlitedTitle != nil {
-            self.setAttributedTitle(self.storedAttributedHighlitedTitle, for: .highlighted)
+        if self.storedAttributedHighlightedTitle != nil {
+            self.setAttributedTitle(self.storedAttributedHighlightedTitle, for: .highlighted)
         }
         
         self.setBackgroundImage(self.storedBackgroundNormalImage, for: .normal)
@@ -520,11 +520,11 @@ private extension SSSpinnerButton {
             
             for item in self.layer.sublayers! where item is CAGradientLayer {
                 item.add(animation, forKey: animation.keyPath)
-                item.cornerRadius = self.cornrRadius
+                item.cornerRadius = self.cornerRadius
             }
         }
         self.isAnimating = false
-        self.layer.cornerRadius = self.cornrRadius
+        self.layer.cornerRadius = self.cornerRadius
         if complete != nil {
             complete!()
             }

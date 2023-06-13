@@ -76,7 +76,7 @@ class SSBallRotateChase: SSSpinnerAnimationDelegate {
         positionAnimation.repeatCount = HUGE
         positionAnimation.path = UIBezierPath(arcCenter: CGPoint(x: x, y: y), radius: size.width / 2, startAngle: CGFloat(3 * Double.pi * 0.5), endAngle: CGFloat(3 * Double.pi * 0.5 + 2 * Double.pi), clockwise: true).cgPath
         
-        // Aniamtion
+        // Animation
         let animation = CAAnimationGroup()
         animation.animations = [scaleAnimation, positionAnimation]
         animation.timingFunction = timeFunc

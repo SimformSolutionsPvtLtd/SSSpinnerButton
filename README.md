@@ -81,7 +81,7 @@ SSSpinnerButton is a versatile library for iOS developers, written in Swift, tha
      
      **To Change the RippleEffect**
     
-        button.setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double, rippleEffectColor: UIColor, rippleEffectPercent: Double, initalRippleEffectPercent: Double)
+        button.setRippleEffect(rippleEffectAnimationDuration: Double, initialOpacity: Double, rippleEffectColor: UIColor, rippleEffectPercent: Double, initialRippleEffectPercent: Double)
 
 # Migration
 **Version 3.0.1**
