@@ -49,10 +49,7 @@ open class SSSpinnerButton: UIButton {
     fileprivate var isAnimating: Bool = false
     
     fileprivate var spinnerType: SpinnerType = Config.spinnerType
-    
-    fileprivate var storedWidth: CGFloat?
-    fileprivate var storedHeight: CGFloat?
-    
+
     /// Sets the button corner radius
     @IBInspectable var cornerRadius: CGFloat = 0 {
         willSet {
@@ -395,9 +392,6 @@ private extension SSSpinnerButton {
         storedHighlightedImage = self.image(for: .highlighted)
         
         storedBackgroundColor = self.backgroundColor
-        storedWidth = frame.width
-        storedHeight = frame.height
-        
         self.setImage(nil, for: .normal)
         self.setImage(nil, for: .disabled)
         self.setImage(nil, for: .selected)
@@ -509,8 +503,6 @@ private extension SSSpinnerButton {
         self.isUserInteractionEnabled = true
         
         let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.fromValue = storedHeight
-        animation.toValue = storedWidth
         animation.duration = self.animationDuration
         animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
