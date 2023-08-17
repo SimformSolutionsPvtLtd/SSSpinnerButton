@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        btnRippleEffect.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: .black, rippleEffectPercent: 0.45, initalRippleEffectPercent: 0.3)
+        btnRippleEffect.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: .black, rippleEffectPercent: 0.45, initialRippleEffectPercent: 0.3)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

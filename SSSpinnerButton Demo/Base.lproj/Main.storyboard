@@ -36,7 +36,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornrRadius">
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
@@ -237,24 +237,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1608.6956521739132" y="21.428571428571427"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vFC-gR-D9D">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mLP-3M-IlK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Z0W-Nf-uIL"/>
-                        <viewControllerLayoutGuide type="bottom" id="hMo-eG-eFa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Olu-jz-NGk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jl-aI-SX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-443" y="144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AlF-cJ-MGF">

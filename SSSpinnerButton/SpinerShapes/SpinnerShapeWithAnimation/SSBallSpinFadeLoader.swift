@@ -43,16 +43,16 @@ class SSBallSpinFadeLoader: SSSpinnerAnimationDelegate {
         scaleAnimation.duration = duration
         
         // Opacity animation
-        let opacityAnimaton = CAKeyframeAnimation(keyPath: "opacity")
+        let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         
-        opacityAnimaton.keyTimes = [0, 0.5, 1]
-        opacityAnimaton.values = [1, 0.3, 1]
-        opacityAnimaton.duration = duration
+        opacityAnimation.keyTimes = [0, 0.5, 1]
+        opacityAnimation.values = [1, 0.3, 1]
+        opacityAnimation.duration = duration
         
         // Animation
         let animation = CAAnimationGroup()
         
-        animation.animations = [scaleAnimation, opacityAnimaton]
+        animation.animations = [scaleAnimation, opacityAnimation]
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = duration
         animation.repeatCount = HUGE
