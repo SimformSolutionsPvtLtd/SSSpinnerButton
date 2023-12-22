@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnRippleEffect.setRippleEffect(rippleEffectAnimationDuration: 0.3, initialOpacity: 0.5, rippleEffectColor: .black, rippleEffectPercent: 0.45, initialRippleEffectPercent: 0.3)
+        print("hello world")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func onSpinnnerButtonClick(_ sender: SSSpinnerButton) {
         let arr: [SpinnerType] = [.ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .circleStrokeSpin, .ballClipRotate, .ballSpinFade, .lineSpinFade, .ballRotateChase, .pacman, .circleScaleMultiple, .circleWaveSpin]
         
