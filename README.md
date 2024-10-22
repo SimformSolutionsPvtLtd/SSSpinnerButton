@@ -4,7 +4,6 @@
 SSSpinnerButton is a versatile library for iOS developers, written in Swift, that allows you to easily create and customize spinner buttons. With this library, you can add loading spinners to your buttons, providing visual feedback to your users while they wait for a process to complete. The library offers a wide range of customizable options, including spinner color, size as well as button text, font, and background color. SSSpinnerButton is simple to integrate into your existing projects and offers excellent performance, making it an essential tool for any iOS developer looking to enhance their user interface.
 
 [![Swift Version][swift-image]][swift-url]
-[![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
 [![Platform][platform-image]][platform-url]
 [![PRs Welcome][PR-image]][PR-url]
@@ -22,6 +21,8 @@ SSSpinnerButton is a versatile library for iOS developers, written in Swift, tha
 # Requirements
   - iOS 10.0+
   - Xcode 9+
+  > **Are looking for swiftUI? Try [SSSwiftUISpinnerButton](https://github.com/SimformSolutionsPvtLtd/SSSwiftUISpinnerButton) for a more conventional set of APIs.**
+
 
 # Installation
  **CocoaPods**
